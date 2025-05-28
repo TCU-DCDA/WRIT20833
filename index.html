@@ -11,66 +11,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
 </head>
 <body>
-    <div class="matrix-bg"></div>
+    <!-- Skip Links for Screen Readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="header">
-        <nav class="nav">
+    <div class="matrix-bg" aria-hidden="true"></div>
+    
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
             <div class="nav-brand">
                 <h1 class="logo">INTRO TO <span class="highlight">CODING</span></h1>
                 <p class="course-code">WRIT-20833</p>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">HOME</a></li>
-                <li><a href="syllabus.html" class="nav-link">SYLLABUS</a></li>
-                <li><a href="policies.html" class="nav-link">POLICIES</a></li>
-                <li><a href="#assignments" class="nav-link">ASSIGNMENTS</a></li>
-                <li><a href="#instructors" class="nav-link">INSTRUCTORS</a></li>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem" aria-current="page">HOME</a></li>
+                <li role="none"><a href="syllabus.html" class="nav-link" role="menuitem">SYLLABUS</a></li>
+                <li role="none"><a href="policies.html" class="nav-link" role="menuitem">POLICIES</a></li>
+                <li role="none"><a href="#assignments" class="nav-link" role="menuitem">ASSIGNMENTS</a></li>
+                <li role="none"><a href="#instructors" class="nav-link" role="menuitem">INSTRUCTORS</a></li>
             </ul>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content" role="main">
         <!-- Home Section -->
-        <section id="home" class="section hero">
-            <div id="hero-animation"></div>
+        <section id="home" class="section hero" aria-labelledby="hero-title">
+            <div id="hero-animation" aria-hidden="true"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" id="hero-title">
                         INTRO TO CODING
                         <span class="highlight glow">IN THE HUMANITIES</span>
                     </h1>
                     <p class="hero-subtitle">Exploring digital tools and computational thinking for humanistic inquiry</p>
-                    <div class="hero-stats">
+                    <div class="hero-stats" role="group" aria-label="Course statistics">
                         <div class="stat">
-                            <span class="stat-number">2025</span>
+                            <span class="stat-number" aria-label="Year">2025</span>
                             <span class="stat-label">SPRING SEMESTER</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">15</span>
+                            <span class="stat-number" aria-label="Duration">15</span>
                             <span class="stat-label">WEEKS</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">3</span>
+                            <span class="stat-number" aria-label="Credit hours">3</span>
                             <span class="stat-label">CREDITS</span>
                         </div>
                     </div>
                     <div class="hero-buttons">
-                        <a href="#syllabus" class="btn btn-primary">VIEW SYLLABUS</a>
-                        <a href="#assignments" class="btn btn-secondary">ASSIGNMENTS</a>
+                        <a href="#syllabus" class="btn btn-primary" aria-describedby="syllabus-desc">VIEW SYLLABUS</a>
+                        <span id="syllabus-desc" class="sr-only">Navigate to course syllabus section</span>
+                        <a href="#assignments" class="btn btn-secondary" aria-describedby="assignments-desc">ASSIGNMENTS</a>
+                        <span id="assignments-desc" class="sr-only">Navigate to assignments section</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Syllabus Section -->
-        <section id="syllabus" class="section">
+        <section id="syllabus" class="section" aria-labelledby="syllabus-heading">
             <div class="container">
-                <h2 class="section-title">SYLLABUS</h2>
+                <h2 class="section-title" id="syllabus-heading">SYLLABUS</h2>
                 <div class="syllabus-preview">
                     <h3>14-Week Curriculum Overview</h3>
                     <p>This course combines Python programming fundamentals with web development skills, applying computational thinking to humanities research and digital scholarship.</p>
@@ -200,6 +205,7 @@
                                 <span>c.rode@tcu.edu</span>
                                 <span>Office Hours: Tue/Thu 1-3 PM</span>
                                 <a href="https://calendly.com/c-rode/appointments" target="_blank" class="schedule-link">📅 Schedule Appointment</a>
+                                <a href="./DHSI25_ML5/" target="_blank" class="demo-link">🤖 ML5 Project Demo</a>
                             </div>
                         </div>
                     </div>

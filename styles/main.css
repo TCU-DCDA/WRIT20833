@@ -1,20 +1,28 @@
-/* Cyberpunk Course Website Styles */
+/* Subtle Modern Course Website Styles */
 :root {
-    /* Cyberpunk Color Palette */
-    --neon-cyan: #00f5ff;
-    --neon-pink: #ff0080;
-    --neon-purple: #8000ff;
-    --neon-green: #00ff41;
-    --neon-orange: #ff4500;
+    /* Modern Light Color Palette */
+    --primary-purple: #6b46c1;
+    --primary-light: #8b5cf6;
+    --primary-dark: #553c9a;
+    --accent-purple: #9333ea;
+    --accent-light: #a855f7;
     
-    --dark-bg: #0a0a0f;
-    --darker-bg: #050508;
-    --card-bg: #1a1a2e;
-    --border-glow: #16213e;
+    --light-bg: #f8fafc;
+    --lighter-bg: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
     
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0c0;
-    --text-muted: #808090;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    
+    /* Accent Colors for Light Theme */
+    --neon-cyan: #0891b2;
+    --neon-pink: #db2777;
+    --neon-green: #059669;
+    --neon-orange: #ea580c;
+    --neon-purple: #9333ea;
+    --border-glow: #e2e8f0;
     
     /* Typography */
     --font-heading: 'Orbitron', monospace;
@@ -37,7 +45,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    background: var(--dark-bg);
+    background: var(--light-bg);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -50,7 +58,7 @@ p {
     line-height: 1.7;
 }
 
-/* Matrix Background Effect */
+/* Subtle Background Effect */
 .matrix-bg {
     position: fixed;
     top: 0;
@@ -59,15 +67,15 @@ p {
     height: 100%;
     z-index: -1;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.15) 0%, transparent 50%);
-    animation: matrixShift 20s infinite linear;
+        radial-gradient(circle at 20% 80%, rgba(107, 70, 193, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+    animation: subtleShift 30s infinite linear;
 }
 
-@keyframes matrixShift {
+@keyframes subtleShift {
     0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(1deg); }
+    50% { transform: translateY(-10px) rotate(0.5deg); }
 }
 
 /* Container */
@@ -83,10 +91,11 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(248, 250, 252, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-glow);
+    border-bottom: 1px solid var(--border-color);
     z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -110,17 +119,17 @@ p {
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--text-primary);
-    text-shadow: 0 0 10px var(--neon-cyan);
+    text-shadow: none;
 }
 
 .logo .highlight {
-    color: var(--neon-cyan);
-    text-shadow: 0 0 20px var(--neon-cyan);
+    color: var(--primary-purple);
+    text-shadow: none;
 }
 
 .course-code {
     font-size: 0.9rem;
-    color: var(--neon-pink);
+    color: var(--accent-purple);
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -145,10 +154,10 @@ p {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--neon-cyan);
-    border-color: var(--neon-cyan);
-    box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
-    text-shadow: 0 0 5px var(--neon-cyan);
+    color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 5px rgba(77, 25, 121, 0.2);
+    text-shadow: none;
 }
 
 .nav-toggle {
@@ -161,9 +170,9 @@ p {
 .nav-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--neon-cyan);
+    background: var(--primary-purple);
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px var(--neon-cyan);
+    box-shadow: none;
 }
 
 /* Main Content */
@@ -179,10 +188,9 @@ p {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 700;
-    text-align: center;
+        text-align: center;
     margin-bottom: 3rem;
     color: var(--text-primary);
-    text-shadow: 0 0 20px var(--neon-pink);
     position: relative;
 }
 
@@ -195,7 +203,7 @@ p {
     width: 100px;
     height: 2px;
     background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
-    box-shadow: 0 0 10px var(--neon-cyan);
+    box-shadow: 0 2px 8px rgba(107, 70, 193, 0.1);
 }
 
 /* Hero Section */
@@ -236,7 +244,6 @@ p {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
 }
 
 .hero-title .highlight {
@@ -249,8 +256,8 @@ p {
 }
 
 @keyframes glow {
-    from { text-shadow: 0 0 30px rgba(0, 245, 255, 0.5); }
-    to { text-shadow: 0 0 50px rgba(0, 245, 255, 0.8), 0 0 70px rgba(0, 245, 255, 0.4); }
+    from { color: var(--neon-cyan); }
+    to { color: var(--primary-purple); }
 }
 
 .hero-subtitle {
@@ -273,18 +280,18 @@ p {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    border: 1px solid var(--border-glow);
-    background: rgba(26, 26, 46, 0.5);
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
     border-radius: 8px;
     min-width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .stat-number {
-    font-family: var(--font-heading);
+        font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 700;
     color: var(--neon-green);
-    text-shadow: 0 0 15px var(--neon-green);
 }
 
 .stat-label {
@@ -396,7 +403,6 @@ p {
     font-size: 1.4rem;
     color: var(--neon-pink);
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px var(--neon-pink);
 }
 
 .syllabus-card ul {
@@ -664,6 +670,29 @@ p {
     background: var(--neon-cyan);
     color: var(--dark-bg);
     box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.demo-link {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-purple);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.demo-link:hover {
+    background: var(--primary-purple);
+    color: white;
+    box-shadow: 0 2px 8px rgba(107, 70, 193, 0.3);
     transform: translateY(-2px);
 }
 
