@@ -17,11 +17,11 @@
     --text-muted: #64748b;
     
     /* Accent Colors for Light Theme */
-    --neon-cyan: #0891b2;
-    --neon-pink: #db2777;
-    --neon-green: #059669;
-    --neon-orange: #ea580c;
-    --neon-purple: #9333ea;
+    --neon-cyan: #0369a1;
+    --neon-pink: #be185d;
+    --neon-green: #047857;
+    --neon-orange: #c2410c;
+    --neon-purple: #7c3aed;
     --border-glow: #e2e8f0;
     
     /* Typography */
@@ -209,11 +209,12 @@ p {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, 
-        rgba(26, 26, 46, 0.9) 0%, 
-        rgba(10, 10, 15, 0.95) 100%);
+        rgba(248, 250, 252, 0.95) 0%, 
+        rgba(241, 245, 249, 0.98) 100%);
     padding: 8rem 0 6rem;
     text-align: center;
     position: relative;
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* P5.js Hero Animation */
@@ -224,7 +225,7 @@ p {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.3;
     pointer-events: none; /* Allow clicks to pass through */
 }
 
@@ -244,6 +245,7 @@ p {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    color: var(--text-primary);
 }
 
 .hero-title .highlight {
@@ -328,13 +330,13 @@ p {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-    color: var(--text-primary);
-    box-shadow: 0 0 25px rgba(0, 245, 255, 0.4);
+    color: white;
+    box-shadow: 0 2px 8px rgba(3, 105, 161, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 35px rgba(0, 245, 255, 0.6);
+    box-shadow: 0 5px 15px rgba(3, 105, 161, 0.4);
 }
 
 .btn-secondary {
@@ -345,8 +347,8 @@ p {
 
 .btn-secondary:hover {
     background: var(--neon-pink);
-    color: var(--dark-bg);
-    box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);
+    color: white;
+    box-shadow: 0 2px 8px rgba(190, 24, 93, 0.3);
 }
 
 /* Cards */
@@ -668,8 +670,8 @@ p {
 
 .schedule-link:hover {
     background: var(--neon-cyan);
-    color: var(--dark-bg);
-    box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+    color: white;
+    box-shadow: 0 2px 8px rgba(3, 105, 161, 0.3);
     transform: translateY(-2px);
 }
 

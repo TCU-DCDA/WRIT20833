@@ -1,4 +1,4 @@
-// Cyberpunk Course Website JavaScript
+// Modern Course Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
@@ -78,80 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll event listener for active nav updates
     window.addEventListener('scroll', updateActiveNavLink);
 
-    // Matrix Digital Rain Effect (Optional Enhancement)
-    function createMatrixRain() {
-        const canvas = document.createElement('canvas');
-        canvas.style.position = 'fixed';
-        canvas.style.top = '0';
-        canvas.style.left = '0';
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        canvas.style.pointerEvents = 'none';
-        canvas.style.zIndex = '-1';
-        canvas.style.opacity = '0.1';
-        
-        document.body.appendChild(canvas);
-        
-        const ctx = canvas.getContext('2d');
-        
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-        
-        const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
-        const fontSize = 14;
-        const columns = canvas.width / fontSize;
-        const drops = [];
-        
-        // Initialize drops
-        for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
-        }
-        
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(10, 10, 15, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            ctx.fillStyle = '#00ff41';
-            ctx.font = fontSize + 'px monospace';
-            
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-        
-        setInterval(drawMatrix, 100);
-    }
-
-    // Initialize matrix effect (commented out by default for performance)
-    // createMatrixRain();
-
-    // Cyberpunk Glitch Effect for Hero Title
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        setInterval(() => {
-            if (Math.random() > 0.95) {
-                heroTitle.style.textShadow = `
-                    2px 0 #ff0080,
-                    -2px 0 #00f5ff,
-                    0 0 30px rgba(0, 245, 255, 0.5)
-                `;
-                setTimeout(() => {
-                    heroTitle.style.textShadow = '0 0 30px rgba(0, 245, 255, 0.5)';
-                }, 100);
-            }
-        }, 2000);
-    }
+    // Smooth animations for better user experience
 
     // Parallax Effect for Background Elements
     window.addEventListener('scroll', () => {
@@ -228,40 +155,40 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1500);
     }
 
-    // Console Easter Egg
+    // Console Welcome Message
     console.log(`
     ╔═══════════════════════════════════════════════════════╗
     ║          INTRO TO CODING IN THE HUMANITIES            ║
     ║                   WRIT 20833                          ║
     ║                                                       ║
-    ║  > Initializing humanities protocols...               ║
-    ║  > Loading digital analysis tools...                  ║
-    ║  > System ready for computational thinking...         ║
+    ║  > Initializing course website...                     ║
+    ║  > Loading digital humanities tools...                ║
+    ║  > System ready for learning...                       ║
     ║                                                       ║
     ║  "Code is the bridge between human creativity         ║
     ║   and digital expression."                            ║
     ╚═══════════════════════════════════════════════════════╝
     `);
 
-    // Dynamic Time Display (Current Time in Cyber Format)
-    function updateCyberTime() {
+    // Current Time Display
+    function updateTimeDisplay() {
         const now = new Date();
-        const cyberTime = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}.${String(now.getDate()).padStart(2, '0')} :: ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+        const timeString = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}.${String(now.getDate()).padStart(2, '0')} :: ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
         
         // Update any time displays if they exist
-        const timeDisplays = document.querySelectorAll('.cyber-time');
+        const timeDisplays = document.querySelectorAll('.time-display');
         timeDisplays.forEach(display => {
-            display.textContent = cyberTime;
+            display.textContent = timeString;
         });
     }
 
     // Update time every second
-    setInterval(updateCyberTime, 1000);
-    updateCyberTime(); // Initial call
+    setInterval(updateTimeDisplay, 1000);
+    updateTimeDisplay(); // Initial call
 
     // Performance monitoring
     window.addEventListener('load', () => {
         const loadTime = performance.now();
-        console.log(`🚀 Intro to Coding in the Humanities loaded in ${Math.round(loadTime)}ms`);
+        console.log(`✅ Course website loaded in ${Math.round(loadTime)}ms`);
     });
 });
