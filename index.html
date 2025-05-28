@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
 </head>
 <body>
     <div class="matrix-bg"></div>
@@ -20,10 +21,10 @@
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link active">HOME</a></li>
-                <li><a href="#syllabus" class="nav-link">SYLLABUS</a></li>
+                <li><a href="syllabus.html" class="nav-link">SYLLABUS</a></li>
+                <li><a href="policies.html" class="nav-link">POLICIES</a></li>
                 <li><a href="#assignments" class="nav-link">ASSIGNMENTS</a></li>
                 <li><a href="#instructors" class="nav-link">INSTRUCTORS</a></li>
-                <li><a href="#policies" class="nav-link">POLICIES</a></li>
             </ul>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -36,6 +37,7 @@
     <main class="main">
         <!-- Home Section -->
         <section id="home" class="section hero">
+            <div id="hero-animation"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">
@@ -69,169 +71,38 @@
         <section id="syllabus" class="section">
             <div class="container">
                 <h2 class="section-title">SYLLABUS</h2>
-                <div class="syllabus-grid">
-                    <div class="syllabus-card">
-                        <h3>Course Overview</h3>
-                        <p>An introduction to coding and computational thinking in the humanities. Students will learn programming fundamentals while exploring how digital tools can enhance research, analysis, and creative expression in humanistic disciplines.</p>
-                    </div>
-                    <div class="syllabus-card">
-                        <h3>Learning Objectives</h3>
-                        <ul>
-                            <li>Master Python programming fundamentals</li>
-                            <li>Build interactive web applications</li>
-                            <li>Apply coding to humanities research</li>
-                            <li>Create digital portfolio projects</li>
-                        </ul>
-                    </div>
-                    <div class="syllabus-card">
-                        <h3>Python Fundamentals (Weeks 1-7)</h3>
-                        <div class="week-details">
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 1:</span> Introduction & Setup
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Course overview, computational thinking, Python installation, IDE setup</p>
-                                    <p><strong>Activities:</strong> Environment configuration, first "Hello World" program</p>
-                                    <p><strong>Assignment:</strong> Setup verification & reflection essay</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 2:</span> Variables & Data Types
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Integers, floats, strings, booleans, type conversion</p>
-                                    <p><strong>Activities:</strong> Interactive coding exercises, debugging practice</p>
-                                    <p><strong>Assignment:</strong> Personal data calculator project</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 3:</span> Control Structures
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> If/else statements, loops (for, while), logical operators</p>
-                                    <p><strong>Activities:</strong> Decision tree programming, iteration challenges</p>
-                                    <p><strong>Assignment:</strong> Interactive story generator</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 4:</span> Functions & Modules
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Function definition, parameters, return values, importing libraries</p>
-                                    <p><strong>Activities:</strong> Code organization workshop, library exploration</p>
-                                    <p><strong>Assignment:</strong> Humanities toolkit module creation</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 5:</span> Data Structures
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Lists, dictionaries, tuples, sets, data manipulation</p>
-                                    <p><strong>Activities:</strong> Database simulation, collection management</p>
-                                    <p><strong>Assignment:</strong> Digital collection organizer</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 6:</span> File I/O & Text Processing
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Reading/writing files, text analysis, regular expressions</p>
-                                    <p><strong>Activities:</strong> Literary text parsing, pattern recognition</p>
-                                    <p><strong>Assignment:</strong> Text Analysis Project (Due)</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 7:</span> Web Scraping & APIs
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> HTTP requests, Beautiful Soup, API integration, data ethics</p>
-                                    <p><strong>Activities:</strong> Museum database exploration, ethical scraping discussion</p>
-                                    <p><strong>Assignment:</strong> Research data collection script</p>
-                                </div>
-                            </div>
+                <div class="syllabus-preview">
+                    <h3>14-Week Curriculum Overview</h3>
+                    <p>This course combines Python programming fundamentals with web development skills, applying computational thinking to humanities research and digital scholarship.</p>
+                    
+                    <div class="preview-grid">
+                        <div class="preview-module">
+                            <h4>Python Fundamentals</h4>
+                            <p class="preview-weeks">Weeks 1-7</p>
+                            <ul class="preview-topics">
+                                <li>Programming basics & setup</li>
+                                <li>Variables, data types, control structures</li>
+                                <li>Functions, modules, data structures</li>
+                                <li>File I/O, text processing</li>
+                                <li>Web scraping & APIs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="preview-module">
+                            <h4>Web Development</h4>
+                            <p class="preview-weeks">Weeks 8-14</p>
+                            <ul class="preview-topics">
+                                <li>HTML foundations & semantic markup</li>
+                                <li>CSS styling & responsive design</li>
+                                <li>JavaScript fundamentals</li>
+                                <li>DOM manipulation & interactivity</li>
+                                <li>Final portfolio presentation</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="syllabus-card">
-                        <h3>Web Development (Weeks 8-14)</h3>
-                        <div class="week-details">
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 8:</span> HTML Foundations
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> HTML structure, semantic markup, forms, accessibility basics</p>
-                                    <p><strong>Activities:</strong> Building scholarly article markup, form creation</p>
-                                    <p><strong>Assignment:</strong> Digital CV/portfolio HTML framework</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 9:</span> CSS Styling & Layout
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> CSS selectors, box model, flexbox, grid layout</p>
-                                    <p><strong>Activities:</strong> Typography workshop, layout design challenges</p>
-                                    <p><strong>Assignment:</strong> Styled academic presentation page</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 10:</span> Responsive Design
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Media queries, mobile-first design, CSS frameworks</p>
-                                    <p><strong>Activities:</strong> Multi-device testing, accessibility auditing</p>
-                                    <p><strong>Assignment:</strong> Digital Archive Creation (Due)</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 11:</span> JavaScript Basics
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Variables, functions, events, debugging tools</p>
-                                    <p><strong>Activities:</strong> Interactive storytelling elements, user interaction design</p>
-                                    <p><strong>Assignment:</strong> Dynamic content showcase</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 12:</span> DOM Manipulation
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Document object model, element selection, dynamic content</p>
-                                    <p><strong>Activities:</strong> Interactive timeline creation, data visualization</p>
-                                    <p><strong>Assignment:</strong> Research presentation tool</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 13:</span> Interactive Web Apps
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> APIs, AJAX, local storage, deployment basics</p>
-                                    <p><strong>Activities:</strong> Capstone project development, peer code review</p>
-                                    <p><strong>Assignment:</strong> Final project preparation</p>
-                                </div>
-                            </div>
-                            <div class="schedule-item">
-                                <div class="week-header">
-                                    <span class="week">WEEK 14:</span> Portfolio Presentation
-                                </div>
-                                <div class="week-content">
-                                    <p><strong>Topics:</strong> Project documentation, presentation skills, reflection</p>
-                                    <p><strong>Activities:</strong> Capstone presentations, peer evaluation, course reflection</p>
-                                    <p><strong>Assignment:</strong> Digital Humanities Capstone (Due)</p>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <div class="view-full-syllabus">
+                        <a href="syllabus.html" class="btn-cyber">View Detailed Syllabus →</a>
                     </div>
                 </div>
             </div>
@@ -328,6 +199,7 @@
                             <div class="contact">
                                 <span>c.rode@tcu.edu</span>
                                 <span>Office Hours: Tue/Thu 1-3 PM</span>
+                                <a href="https://calendly.com/c-rode/appointments" target="_blank" class="schedule-link">📅 Schedule Appointment</a>
                             </div>
                         </div>
                     </div>
@@ -345,20 +217,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="instructor-card">
-                        <div class="instructor-avatar">
-                            <div class="avatar-placeholder">JS</div>
-                        </div>
-                        <div class="instructor-info">
-                            <h3>Jordan Smith</h3>
-                            <p class="title">Lab Coordinator</p>
-                            <p class="bio">Digital humanities technologist with expertise in web development and database design for cultural heritage projects.</p>
-                            <div class="contact">
-                                <span>jordan.smith@university.edu</span>
-                                <span>Lab Hours: Fri 10 AM-4 PM</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -367,29 +225,39 @@
         <section id="policies" class="section">
             <div class="container">
                 <h2 class="section-title">POLICIES</h2>
+                <div class="policies-overview">
+                    <p class="policies-intro">This course operates on an innovative "un-grading" system focused on learning rather than performance. Here are our key policies:</p>
+                </div>
                 <div class="policies-grid">
                     <div class="policy-card">
-                        <h3>Attendance Policy</h3>
-                        <p>Regular attendance is mandatory. More than 3 unexcused absences may result in course failure. All absences must be reported within 24 hours.</p>
+                        <h3>🏳️‍🌈 Safe Zone Policy</h3>
+                        <p>We welcome, affirm, and celebrate all LGBTQIA+ community members. Our classroom is a safe space where homophobic comments are not tolerated and inclusive language is prioritized.</p>
                     </div>
                     <div class="policy-card">
-                        <h3>Academic Integrity</h3>
-                        <p>All work must be original. Collaboration is encouraged for discussions but assignments must be completed individually unless specified otherwise.</p>
+                        <h3>📊 Un-grading System</h3>
+                        <p>No traditional grades on assignments. Instead, we provide detailed feedback and you write self-reflection essays to propose your own grades based on learning progress.</p>
                     </div>
                     <div class="policy-card">
-                        <h3>Late Submission</h3>
-                        <p>Late assignments will be penalized 10% per day. Extensions may be granted for documented emergencies or technical difficulties.</p>
+                        <h3>🤖 AI Encouraged</h3>
+                        <p>Generative AI (ChatGPT, Gemini, etc.) is permitted and encouraged! Document all AI usage with detailed comments in your code.</p>
                     </div>
                     <div class="policy-card">
-                        <h3>Grading Scale</h3>
-                        <div class="grading-scale">
-                            <div class="grade-item">A: 90-100%</div>
-                            <div class="grade-item">B: 80-89%</div>
-                            <div class="grade-item">C: 70-79%</div>
-                            <div class="grade-item">D: 60-69%</div>
-                            <div class="grade-item">F: Below 60%</div>
-                        </div>
+                        <h3>📅 Flexible Attendance</h3>
+                        <p>No attendance points deducted, but consistent participation is essential for learning progression. Please notify instructors of anticipated absences.</p>
                     </div>
+                    <div class="policy-card">
+                        <h3>⏰ Late Work Policy</h3>
+                        <p>No point deductions for late work under our un-grading system. Contact instructors before deadlines for extensions—we're typically happy to provide them.</p>
+                    </div>
+                    <div class="policy-card">
+                        <h3>💻 System Requirements</h3>
+                        <p>Reliable computer with internet access required. We'll use Google Colab for Python coding (browser-based). TCU email and Google account necessary.</p>
+                    </div>
+                </div>
+                <div class="policies-cta">
+                    <p>For complete policy details including grading philosophy, class norms, and resources:</p>
+                    <a href="policies.html" class="btn-primary">View Full Policies</a>
+                </div>
                     <div class="policy-card">
                         <h3>Technology Use</h3>
                         <p>Laptops and tablets are permitted for course-related activities. Mobile phones must be silenced. Recording lectures requires permission.</p>
@@ -410,5 +278,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/hero-animation.js"></script>
 </body>
 </html>

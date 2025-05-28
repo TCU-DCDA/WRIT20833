@@ -1,0 +1,419 @@
+ 
+
+Introduction to Coding in the Humanities 
+WRIT 20833.020
+
+
+Course & Instructor Information
+Course
+Semester: Fall 2025 (8/18–12/12)
+Course Type/Credits: Lecture with Integrated Lab (LCL), 3 credit hours   Class Location & Meetings: Beasley Hall (BEA), MWF 10:00–10:50 am CST
+
+Instructors
+Instructor: Curt Rode, PhD
+Office & Office Hours: Scharbauer Hall 2006, by appointment (see calendar link below)
+Scheduling Calendar: https://calendly.com/c-rode/appointments 
+Email: c.rode@tcu.edu (preferred method of contact)
+Zoom: Available with scheduled meetings  
+Telephone: (817) 257-6983 
+
+Instructor: Brad Lucas, PhD
+Office & Office Hours: Scharbauer 2001F, by appointment (see calendar link below)
+Scheduling Calendar: https://calendly.com/b-lucas/appointments 
+Email: b.e.lucas2@tcu.edu (preferred method of contact)
+Zoom: Available with scheduled meetings  
+Telephone: (817) 257-6981, for voicemail only
+
+Final Evaluative Exercise & Important Dates
+September 1		Labor Day holiday
+October 8		Fall Break begins (classes resume 10/13)
+November 3		Last day to withdraw from a class
+November 22		Thanksgiving break begins (classes resume 12/1)
+December 3		Last day of classes
+December 13		Final Evaluative Exercise: Presentations (8:00-10:30) 
+Contents
+Course Description	3
+Prerequisites & Concurrent Enrollment	3
+Program and Major Connections	3
+Course Materials	4
+Teaching Methodology	4
+Learning Outcomes	4
+Course Learning Outcomes	4
+Program and Major Learning Outcomes	4
+TCU Outcomes: Core Curriculum	4
+Course Requirements	5
+Assignments	5
+Project	5
+Grades	5
+Attendance and Tardiness	5
+Late Work	6
+Class Enrichment	6
+Course Assignments & Final Grade	6
+Grading Scale	7
+Course Policies	7
+Safe Zone	7
+System Requirements	7
+Class Norms & Recordings	8
+Center for Digital Expression (Scharbauer 2003)	8
+Course Schedule: Fall 2025	9
+
+Student Resources & Policy Information
+Click or scan the QR code for resources to support you as a TCU student. Please note the sections on Student Access and Accommodation, Academic Conduct & Course Materials Policies, and Emergency Response & TCU Alert. You can also access these resources through TCU Online. 
+
+Land Acknowledgment
+As a university, we acknowledge the many benefits we have of being in this place. It is a space we share with all living beings, human and non-human. It is an ancient space where others have lived before us. The monument created jointly by TCU and the Wichita and Affiliated Tribes reminds us of our benefits, responsibilities, and relationships. We pause to reflect on its words: This ancient land, for all our relations. We respectfully acknowledge all Native American peoples who have lived on this land since time immemorial. TCU especially acknowledges and pays respect to the Wichita and Affiliated Tribes (Kitikiti'sh/Kirikirish), upon whose historical homeland our university is located.  
+Course Description
+Catalog Description: “This course is designed as an introduction to coding for students in the Humanities and/or the Digital Culture and Data Analytics (DCDA) Minor. Hence, students will be introduced to the basics of a computer programming language (such as Python or R) as it pertains to the intellectual, cultural, and creative work central to the Humanities.” 
+So often we think of computer programming as the purview of computer science, mathematics, and the hard sciences. And we’re not wrong. But if we start to broaden our definition of “data” to include the publication date and page count of our favorite novels, or how frequently specific words occur in the collected work of our favorite poets or in a social media debate, we begin to see how the elements of the texts we study in the humanities—novels, poems, plays, essays, historical records, government documents, Twitter posts, blog entries, consumer feedback—can be “counted” in meaningful ways.
+Once we see our favorite texts as a collection of countable objects, we realize how much humanities might benefit from computational analysis. In “Introduction to Coding in the Humanities,” you will be introduced to the basics of a computer programming language (such as Python or R) to broaden your ability to analyze representative texts of significance and to practice critical analysis of work at the center of the humanities.
+The course asks students to engage in questions like these:
+	•	How do the questions we might ask about cultural diversity change when we can effectively “read” thousands of documents at once?
+	•	How does implicit bias shape the algorithms used to recommend content? What solutions might mitigate this bias? Why is this bias significant to our society?
+	•	How do our beliefs and practices regarding cultural representation change when we can engage with and manipulate images one pixel at a time?
+	•	How might our understanding of writing personal and public arguments shift when we engage them from a procedural or computational perspective?
+This is an introductory course, but it is designed for students with a particular interest in computers and in working thoughtfully and creatively in digital environments. 
+Prerequisites & Concurrent Enrollment
+There are no prerequisites for this class. 
+Program and Major Connections 
+	•	Digital Culture and Data Analytics major/minor: Required courses (selection)
+	•	Writing & Rhetoric major/minor: Digital Rhetorics and Design (subcategory)
+	•	English major/minor: Elective
+
+Course Materials
+Melanie Walsh, Introduction to Cultural Analytics & Python, Version 1 (2021) https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html 
+Teaching Methodology
+The first third of the course will focus on learning the basics of Python and be mainly made up of minor assignments. The rest of the class will focus on applying those Python basics to research questions in the Humanities. We will provide a blend of lectures, in-class programming demonstrations, guided activities, and one-on-one support.
+Learning Outcomes 
+Learning outcomes are the driving forces of this course: they are the focusing themes that inform everything we do. The learning outcomes listed below are the goals we are working toward that you should meet by the end of WRIT 20833. See Course Assignments & Final Grade below to see these outcomes in the context of your semester work. 
+Course Learning Outcomes 
+These two outcomes, particular to this course, shape the work we’ll do this semester:  
+	•	Students will use computer programming as an exploratory research tool designed to ask, but not always answer, important cultural questions.
+	•	Students will reflect on the limitations of computational methods common to the Digital Humanities. 
+Program and Major Learning Outcomes 
+These outcomes are particular to the majors/minors in Digital Culture and Data Analytics (DCDA); English; and Writing & Rhetoric:
+	•	Students will develop at least basic proficiency with at least one coding language (R, Python). [DCDA01]
+	•	Students will analyze how rhetorical acts and texts in various media emerge from or respond to specific cultural discourses and/or relations of power. [WRIT02]
+	•	Students will analyze how literature and/or other cultural texts produce meaning, including connecting close reading to broader arguments about texts. [ENGL02]
+TCU Outcomes: Core Curriculum
+WRIT 20833 fulfills the Humanities (HUM) and Citizenship & Social Values (CSV) outcomes for the TCU Core Curriculum 
+	•	Use humanistic modes of inquiry to analyze human experiences and expressions across space and time. [HUM]
+	•	Examine the knowledge, skills, values, or motivation needed to participate or lead within diverse communities. [CSV]
+Course Requirements
+Assignments
+Throughout the semester, the majority of your evaluated work will consist of six (6) Homework Assignments and three (3) Threaded Discussions. Some of these will engage with the reading done for class, typically not just checking to see if you read, but asking you to think further on a given topic, concept, or concern. Some of these will be used as “scaffolding”: building the skills necessary for the semester project. Some will be technological: for example, developing or revising simple computer scripts written in Python.  
+Project
+There will be one major assignment, a final Semester Project that may be individual or group, that will allow you to practice and showcase the skills you've acquired in the class. 
+Grades
+In this class, we won’t be grading individual assignments or calculating points/percentages. Instead, we’ll offer lots of feedback without any points or letter associated with it—but along the way we will indicate if you are meeting expectations. Throughout the semester, you will write three self-reflection essays (about a page each) on how you’ve developed as a learner. On the second and third of these essays, you will indicate the grade you believe you have earned. These will work out to your midterm and final letter grades (A, A-, B+, B, B- and so on). We reserve the right to change your grade, but in general we defer to you as the best judge of your learning.
+For more information on the rationale behind this system, we recommend these short, approachable blog posts by Dr. Jesse Stommel: "Why I Don't Grade" and "How to Ungrade." We are more than willing to supply more detailed pedagogical scholarship on this rationale at your request. The online self-reflection essay documents provide detailed descriptions of how to successfully argue for a grade. 
+Attendance and Tardiness
+In keeping with the "un-grading" policy of the course (see below), we will not take official attendance nor deduct points for missed classes or late arrivals. The class will move quickly, however, so it's your responsibility to check in with both of us should you miss any course content or instruction. More than most other courses, what we study and practice on a Monday will be essential for what we'll study on Wednesday, etc. (imagine learning multiplication without knowing first how to add). Missing class equals missing important steps in the learning process. A pattern of absences may also affect the case you build for your semester grade.
+Our "un-grading" policy is aligned with the university's non-penalizing approach to Excused Absences or Official University Absences. Excused Absences or Official University Absences are absences described in the Official University Absence Policy and include the following: Title IX related issues, military leave, holy days, and university related absences. As faculty we may not penalize students for these absences and must allow for the completion of assignments and exams within a reasonable amount of time after the absences. Beyond these, faculty retain all discretion for consideration of a student’s absence, including absences verified by the Dean of Students’ Office.
+If for some reason you anticipate being absent, arriving late, or leaving early during a class period, please let us know beforehand! 
+(Note: We do not take attendance, but for the record: because it is considered an infringement on student privacy for faculty to have access to student medical records, faculty cannot accept medical documentation to justify absences. If you have a legitimate reason for your absence and want to provide verification, please access the Absence Documentation Form here.) 
+Late Work
+We don’t like to allow late work because it can pile up quickly, and it limits our ability as instructors to provide timely feedback. However, we also don’t deduct any points for late work. Please contact us before the assignment is due if you would like an extension. We're typically happy to give you one. Understand, though, that a pattern of late work may affect the case you build for your semester grade.
+Class Enrichment
+We cannot emphasize this enough: learning any new skill requires an active engagement on the part of the learner. Therefore, class participation is a critical component of the course. While some lecture will be necessary to establish necessary contexts and to propose reading strategies, most of the learning needs to come from lively discussion and a certain degree of daring and play. Get involved early and often. The class will surpass expectations if you do; it will be miserable if you don’t.
+Course Assignments & Final Grade
+
+Listed below is a breakdown of course components that will shape and determine your final semester grade, presented in the sequence of appearance in the course: 
+Course components
+Learning Outcomes
+Homework (6)
+1, 3
+Threaded Discussions (3)
+2, 4, 5, 6, 7
+Self-Reflection Essays (3)
+2, 4, 5, 6, 7
+Semester Project
+1, 2, 3, 4, 5, 6, 7
+ 
+LO 1. Use computer programming as an exploratory research tool designed to ask, but not always answer, important cultural questions.
+LO 2. Reflect on the limitations of computational methods common to the Digital Humanities. 
+LO 3. Develop at least basic proficiency with at least one coding language (R, Python). [DCDA]
+LO 4. Analyze how rhetorical acts/texts in various media emerge from or respond to specific cultural discourses and/or relations of power. (WRIT)
+LO 5. Analyze how literature and/or other cultural texts produce meaning, including connecting close reading to broader arguments about texts. (ENGL)
+LO 6. Use humanistic modes of inquiry to analyze human experiences and expressions across space and time. (HUM)
+LO 7. Examine the knowledge, skills, values, or motivation needed to participate or lead within diverse communities. (CSV)
+Grading Scale
+ For your reference, the faculty definition of grades, and the letter/percentage system designed to indicate quality of work in this class, is as follows:
+
+Work Quality
+Letter Grade
+Semester Grade Points (GPA)
+Excellent
+A
+4.00
+
+A-
+3.67
+
+B+
+3.33
+Good
+B
+3.00
+
+B-
+2.67
+
+C+
+2.33
+Satisfactory
+C
+2.00
+
+C-
+1.67
+
+D+
+1.33
+Poor
+D
+1.00
+
+D-
+0.67
+Failing
+F
+0.00
+  Course Policies
+ Safe Zone
+Our goal is for each student to feel comfortable and able to connect with course content and classroom discussion. Please know that we welcome, affirm, and celebrate persons in the LGBTQIA communities of Texas Christian University. (LGBTQIA stands for Lesbian, Gay, Bisexual, Transgender, Queer, Intersex, Asexual, Ally). We will not allow homophobic comments in class and will strive to use inclusive language. Please visit http://www.allies.tcu.edu/training.asp for more information.
+System Requirements
+Throughout the semester, you will be doing a lot of coding in Python. It is your responsibility to ensure that you have the necessary hardware to do this. If you have any technical difficulties, contact your professor or IT at least a week before the assignment is due. 
+Computer: You must have access to a reliable computer and internet connection to take this course, a machine that meets the TCU Online minimum requirements. 
+TCU Online is required for this class.  
+Google: You will need a Google account and some familiarity with Google Drive. We will use Google Colab extensively, which allows you to do the coding from a browser on a Mac or PC. 
+Generative Artificial Intelligence (AI) technology (Google Gemini, ChatGPT, etc.) is permitted—and encouraged—for your use in this class provided that you document, in detail, any and all uses of the technology through descriptive notes (# comments).
+Note: The inappropriate or unauthorized use of AI-generated content may be academic misconduct and/or a violation of discipline-specific professional ethics. Such misuse will be handled according to TCU’s Academic Conduct Policy or other relevant policies and may result in sanctions, including failing the course, program dismissal, suspension, or expulsion.
+Email: Only the official TCU student email address will be used for all course notifications. It is your responsibility to check your TCU email on a regular basis: you should check it daily.  
+Class Norms & Recordings
+We consider our classroom a safe space for people to learn, and we have an obligation to ensure it remains intact. All members of the class are expected to follow rules of common courtesy in person and in all email messages, discussions, or any exchanges on a digital platform related to this class. 
+Our class sessions are not available for public consumption or circulation beyond the intended uses for this class. Audio, video, or screen recording (including screen shots, snips, grabs, etc.) is prohibited and can result in a failing grade for this course and suspension of access to University Computing Resources. TCU students are prohibited from sharing any portion of course materials (including videos, PowerPoint slides, assignments, or notes) with others, including on social media, without written permission by the course instructors. Be sure to read the full TCU policy. 
+Of course, if you have accommodations that allow you to make audio recordings, however, please review Student Access and Accommodation and contact me immediately. You can, of course, take good notes. If you cannot attend a class for any reason, you’re welcome to contact another classmate to find out what you missed, and you can always set up a one-on-one conference with me if you have questions about the material. 
+Center for Digital Expression (Scharbauer 2003)
+The CDEx is available to students working on new media and digital humanities assignments. The staff is available to help you with your projects. We will refer to the resource sections in the CDEx website (cdex.tcu.edu) throughout the course, but you can also view the weekly schedule for consultations.  
+
+
+
+
+Course Schedule: Fall 2025
+The course planning schedule below provides only the “big picture” for the semester. Updates to this schedule will be shared exclusively through the “Fall 2025 Course” link in D2L.
+Be sure to visit the Registrar’s Fall 2025 Academic Calendar for details about last days for enrollment, withdrawal, tuition refunds, university closings/holidays, and final exam schedule.   
+Week
+Date
+ 
+Technical Readings
+Additional Readings
+Assignments
+Unit 1 Python Basics 
+Week 1
+Course Introduction, Overview of Digital Humanities
+
+ 
+ 
+
+
+Introduction to Python &
+Intro to Colab
+ 
+Anatomy of a Python Script
+ 
+Self-Reflection 1 due by 11:30 pm 
+
+
+  
+ 
+ 
+ 
+HW 1 due by Sunday 11:30 pm
+
+
+Week 2
+Variables & Data Types
+Variables, Data Types
+
+ 
+
+
+Files, Character Encoding, String Methods
+Files and Character Encoding
+String Methods
+ 
+
+ 
+
+
+ 
+ 
+
+Threaded Discussion 1 due by  Sunday  11:30 pm
+
+Week 3 
+Conditionals & Comparisons
+Conditionals & Comparisons
+ 
+ 
+
+
+ Lists & Loops
+Lists & Loops
+Lists & Loops 2
+ 
+ 
+
+
+Threaded Discussion
+ 
+ 
+HW 2 due by  Sunday 11:30 pm
+
+Week 4
+Dictionaries, Functions
+Dictionaries, Functions
+
+
+
+
+Review  
+
+
+
+Unit 2 Data analysis and  collection 
+Week 5
+Data Analysis
+Pandas Basics -- Part 1 & 2
+
+ 
+
+
+Data Analysis
+Pandas Basics -- Part 3 & 4
+ 
+ 
+
+
+ 
+ 
+ 
+HW 3 due by  Sunday 11:30 pm
+
+Week 6
+Data Collection
+
+Web Scraping, Parts 1 & 2
+
+ 
+
+
+Data Collection
+Working with APIs
+Read “An Illustrated Introduction to APIs,”
+ 
+
+
+ 
+ 
+
+HW 4 due by  Sunday 11:30 pm 
+Unit 3 text analysis 
+Week 7
+Text Analysis
+TF-IDF
+ 
+ 
+Self-Reflection 2 due by  Sunday 11:30 pm
+
+
+Text Analysis
+Sentiment Analysis
+ Read “Data Biographies”
+Threaded Discussion 2 due by 11:30 pm
+
+Week 8
+Text Analysis
+Sentiment Analysis
+ 
+
+
+
+Text Analysis
+Topic Modeling Overview
+
+ 
+ HW 5 due by 11:30 pm
+
+Week  9 
+Text Analysis
+Topic Modeling continued
+
+
+
+
+Text Analysis
+TBD
+ 
+HW 6 due by 11:30 pm
+
+Week 10
+Topics in DH 
+ 
+
+
+
+
+Topics in DH 
+
+ 
+Threaded Discussion 3 due by 11:30 pm
+Unit 4 project 
+
+Week 11
+Project Workshop
+ 
+
+
+Project Workshop
+Final Project Proposal Due 
+
+Week 12
+Project Workshop
+Dataset Biography due by 11:30 pm
+
+
+Project Workshop
+Group Contract due 
+
+Week 13 
+Project Workshop
+ 
+
+
+Project Workshop
+ 
+
+Week 14
+ 
+Project Workshop
+ 
+
+
+Project Workshop
+ 
+
+Week 15 
+Thanksgiving Break
+ 
+
+Week 16 
+Project Workshop
+Final Project due by 11:30 pm
+ 
+Finals Week
+Final exam period
+Presentations during exam period
+Self-Reflection 3 
+Self-Reflection 3 due  
+

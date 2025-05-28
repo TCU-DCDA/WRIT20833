@@ -15,27 +15,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
             
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                // Close mobile menu if open
+            // Check if it's an internal anchor link (starts with # but not a link to another page)
+            if (href.startsWith('#') && !href.includes('.html')) {
+                e.preventDefault();
+                
+                const targetSection = document.querySelector(href);
+                
+                if (targetSection) {
+                    // Close mobile menu if open
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    
+                    // Smooth scroll to section
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    updateActiveNavLink(this);
+                }
+            } else {
+                // For external links (like syllabus.html or index.html#section), let the browser handle navigation normally
+                // Just close mobile menu if open
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
-                
-                // Smooth scroll to section
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Update active nav link
-                updateActiveNavLink(this);
             }
         });
     });
