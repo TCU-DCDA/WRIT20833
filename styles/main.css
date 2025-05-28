@@ -7,22 +7,22 @@
     --accent-purple: #9333ea;
     --accent-light: #a855f7;
     
-    --light-bg: #f8fafc;
-    --lighter-bg: #ffffff;
+    --light-bg: #e2e8f0;
+    --lighter-bg: #f1f5f9;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
     
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --text-muted: #64748b;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #475569;
     
     /* Accent Colors for Light Theme */
-    --neon-cyan: #0369a1;
+    --neon-cyan: #0284c7;
     --neon-pink: #be185d;
     --neon-green: #047857;
     --neon-orange: #c2410c;
     --neon-purple: #7c3aed;
-    --border-glow: #e2e8f0;
+    --border-glow: #cbd5e1;
     
     /* Typography */
     --font-heading: 'Orbitron', monospace;
@@ -58,6 +58,42 @@ p {
     line-height: 1.7;
 }
 
+/* Enhanced text readability improvements */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Ensure all paragraph text has good contrast */
+p, li, span, div {
+    color: var(--text-primary);
+}
+
+/* Override any remaining light text */
+.text-light {
+    color: var(--text-secondary) !important;
+}
+
+/* Ensure card content is readable */
+.card p, .card li, .card span {
+    color: var(--text-primary);
+}
+
+/* Assignment card text */
+.assignment-card p, .assignment-card li {
+    color: var(--text-primary);
+}
+
+/* Instructor card text */
+.instructor-card p, .instructor-card li {
+    color: var(--text-primary);
+}
+
+/* Policy card text */
+.policy-card p, .policy-card li {
+    color: var(--text-primary);
+}
+
 /* Subtle Background Effect */
 .matrix-bg {
     position: fixed;
@@ -91,7 +127,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(248, 250, 252, 0.95);
+    background: rgba(226, 232, 240, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -141,7 +177,7 @@ p {
 }
 
 .nav-link {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -150,13 +186,16 @@ p {
     border: 1px solid transparent;
     transition: all 0.3s ease;
     position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-purple);
+    color: #ffffff;
+    background: var(--primary-purple);
     border-color: var(--primary-purple);
-    box-shadow: 0 0 5px rgba(77, 25, 121, 0.2);
+    box-shadow: 0 2px 10px rgba(77, 25, 121, 0.3);
     text-shadow: none;
 }
 
@@ -724,7 +763,6 @@ p {
     font-size: 1.3rem;
     color: var(--neon-orange);
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px var(--neon-orange);
 }
 
 .grading-scale {
@@ -791,7 +829,6 @@ p {
     font-family: var(--font-heading);
     color: var(--neon-cyan);
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px var(--neon-cyan);
 }
 
 .curriculum-grid {
@@ -819,7 +856,6 @@ p {
     font-family: var(--font-heading);
     color: var(--neon-green);
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 10px var(--neon-green);
 }
 
 .assessment-grid {
@@ -858,7 +894,7 @@ p {
 
 .btn-cyber {
     background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-    color: var(--text-primary);
+    color: #ffffff;
     padding: 1rem 2rem;
     border-radius: 4px;
     text-decoration: none;
@@ -889,7 +925,6 @@ p {
     font-family: var(--font-heading);
     color: var(--neon-pink);
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px var(--neon-pink);
 }
 
 .preview-grid {
@@ -948,31 +983,29 @@ p {
 
 /* Policies Page Styles */
 .hero-small {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--lighter-bg) 0%, var(--card-bg) 100%);
+    color: var(--text-primary);
     padding: 4rem 0 2rem;
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-small .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #00f5ff, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-purple);
 }
 
 .hero-small .lead {
     font-size: 1.2rem;
-    opacity: 0.9;
+    color: var(--text-secondary);
     margin: 0;
 }
 
 .policy-content {
     padding: 4rem 0;
-    background: #0a0a0a;
+    background: var(--light-bg);
 }
 
 .policy-grid {
@@ -983,22 +1016,22 @@ p {
 }
 
 .policy-section {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 245, 255, 0.2);
+    background: var(--card-bg);
+    border: 1px solid var(--border-glow);
     border-radius: 12px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .policy-section:hover {
-    border-color: rgba(0, 245, 255, 0.4);
-    box-shadow: 0 8px 32px rgba(0, 245, 255, 0.1);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 5px 25px rgba(2, 132, 199, 0.2);
     transform: translateY(-2px);
 }
 
 .policy-section h2 {
-    color: #00f5ff;
+    color: var(--neon-cyan);
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -1008,7 +1041,7 @@ p {
 }
 
 .policy-section h3 {
-    color: #ff00ff;
+    color: var(--neon-pink);
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1.5rem 0 1rem;
@@ -1018,7 +1051,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
 }
 
 .policy-section ul {
@@ -1030,7 +1063,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-primary);
 }
 
 .policy-section a {
@@ -1070,7 +1103,7 @@ p {
 }
 
 .grade-row .description {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
@@ -1082,7 +1115,7 @@ p {
 
 .policies-intro {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-primary);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -1099,7 +1132,7 @@ p {
 
 .policies-cta p {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
 }
 
