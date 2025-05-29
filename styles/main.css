@@ -247,9 +247,14 @@ p, li, span, div {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, 
-        rgba(248, 250, 252, 0.95) 0%, 
-        rgba(241, 245, 249, 0.98) 100%);
+    background: 
+        linear-gradient(135deg, 
+            rgba(15, 23, 42, 0.4) 0%, 
+            rgba(51, 65, 85, 0.5) 100%),
+        url('../images/banner_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 8rem 0 6rem;
     text-align: center;
     position: relative;
@@ -284,12 +289,14 @@ p, li, span, div {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: var(--text-primary);
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero-title .highlight {
-    color: var(--neon-cyan);
+    color: #00f5ff;
     display: block;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
 }
 
 .glow {
@@ -297,15 +304,22 @@ p, li, span, div {
 }
 
 @keyframes glow {
-    from { color: var(--neon-cyan); }
-    to { color: var(--primary-purple); }
+    from { 
+        color: #00f5ff; 
+        text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+    }
+    to { 
+        color: #ff00ff; 
+        text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    }
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    color: var(--text-secondary);
+    color: #e2e8f0;
     margin-bottom: 3rem;
     font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .hero-stats {
@@ -321,25 +335,28 @@ p, li, span, div {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    border: 1px solid var(--border-color);
-    background: var(--card-bg);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     min-width: 120px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
 }
 
 .stat-number {
-        font-family: var(--font-heading);
+    font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--neon-green);
+    color: #00f5ff;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: #e2e8f0;
     font-weight: 600;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .hero-buttons {
