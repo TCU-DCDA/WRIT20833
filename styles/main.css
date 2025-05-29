@@ -314,6 +314,17 @@ p, li, span, div {
     }
 }
 
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
 .hero-subtitle {
     font-size: 1.3rem;
     color: #e2e8f0;
@@ -437,6 +448,258 @@ p, li, span, div {
     border-color: var(--neon-cyan);
     box-shadow: 0 5px 25px rgba(0, 245, 255, 0.2);
     transform: translateY(-5px);
+}
+
+/* Grid Layouts */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.instructors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.policies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Assignment Cards */
+.assignment-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.assignment-card:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 8px 30px rgba(0, 245, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.assignment-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.assignment-status {
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.assignment-status.ongoing {
+    background: rgba(4, 120, 87, 0.2);
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    animation: pulse 2s infinite;
+}
+
+.assignment-status.due {
+    background: rgba(194, 65, 12, 0.2);
+    color: var(--neon-orange);
+    border: 1px solid var(--neon-orange);
+}
+
+.assignment-status.upcoming {
+    background: rgba(0, 245, 255, 0.2);
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+}
+
+.assignment-status.future {
+    background: rgba(255, 0, 128, 0.2);
+    color: var(--neon-pink);
+    border: 1px solid var(--neon-pink);
+}
+
+.assignment-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.assignment-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-glow);
+    margin-top: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.assignment-meta .points {
+    color: var(--neon-orange);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.assignment-meta .type {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: rgba(107, 70, 193, 0.1);
+}
+
+/* Instructor Cards */
+.instructor-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.instructor-card:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 8px 30px rgba(147, 51, 234, 0.15);
+    transform: translateY(-5px);
+}
+
+.instructor-avatar {
+    flex-shrink: 0;
+}
+
+.instructor-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-glow);
+    transition: all 0.3s ease;
+}
+
+.instructor-card:hover .instructor-photo {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+}
+
+.instructor-info {
+    flex: 1;
+}
+
+.instructor-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.instructor-info .title {
+    color: var(--neon-purple);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.instructor-info .bio {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.instructor-info .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.instructor-info .contact span {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.instructor-info .contact a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.instructor-info .contact a:hover {
+    color: var(--neon-pink);
+}
+
+/* Policy Cards */
+.policy-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.policy-card:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 8px 30px rgba(190, 24, 93, 0.15);
+    transform: translateY(-5px);
+}
+
+.policy-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.policy-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
 }
 
 /* Lectures Section */
@@ -654,6 +917,108 @@ p, li, span, div {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+}
+
+/* Syllabus Cards for Curriculum Sections */
+.syllabus-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.syllabus-card:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+    transform: translateY(-5px);
+}
+
+.syllabus-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.syllabus-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
+}
+
+/* Week Details Container */
+.week-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Individual Schedule Items */
+.schedule-item {
+    background: rgba(107, 70, 193, 0.05);
+    border: 1px solid rgba(107, 70, 193, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+    border-color: var(--neon-cyan);
+    background: rgba(0, 245, 255, 0.05);
+    transform: translateX(5px);
+}
+
+/* Week Headers */
+.week-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.week-header .week {
+    background: var(--neon-purple);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 16px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Week Content */
+.week-content {
+    margin-left: 1rem;
+}
+
+.week-content p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.week-content p:last-child {
+    margin-bottom: 0;
+}
+
+.week-content strong {
+    color: var(--neon-cyan);
+    font-weight: 600;
 }
 
 .syllabus-footer {
