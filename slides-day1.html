@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Coding Meets Culture - Day 1 Lecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <!-- Slide 7: Cultural Data -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">7 / 13</div>
+            <h2>Culture as <span class="highlight">Data</span></h2>
+            <p style="margin-bottom: 2rem;">Everything cultural can become computational—the key is asking the right questions:</p>
+            <ul>
+                <li><strong>Texts:</strong> Novels, poems, newspapers, social media posts, reviews, letters</li>
+                <li><strong>Images:</strong> Paintings, photographs, films, album covers, memes, advertisements</li>
+                <li><strong>Audio:</strong> Music, speeches, oral histories, podcasts, radio broadcasts</li>
+                <li><strong>Spatial:</strong> Maps, architecture, city layouts, migration patterns, trade routes</li>
+                <li><strong>Networks:</strong> Social connections, influence patterns, citation networks, collaborations</li>
+                <li><strong>Temporal:</strong> Historical trends, seasonal patterns, generational changes</li>
+            </ul>
+            <div class="quote" style="margin-top: 2rem;">
+                "The question becomes: What stories do these patterns tell us about who we are and how we live?"
+            </div>
+        </div>
+    </div>="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        :root {
+            --primary-purple: #6b46c1;
+            --primary-light: #8b5cf6;
+            --primary-dark: #553c9a;
+            --accent-purple: #9333ea;
+            --accent-light: #a855f7;
+            
+            --light-bg: #e2e8f0;
+            --lighter-bg: #f1f5f9;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #475569;
+            
+            --neon-cyan: #0284c7;
+            --neon-pink: #be185d;
+            --neon-green: #047857;
+            --neon-orange: #c2410c;
+            --neon-purple: #7c3aed;
+            
+            --font-heading: 'Orbitron', monospace;
+            --font-body: 'Rajdhani', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--light-bg);
+            color: var(--text-primary);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            display: none;
+            width: 90%;
+            max-width: 1200px;
+            height: 90%;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            position: relative;
+            padding: 3rem;
+            overflow: hidden;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(107, 70, 193, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.03) 0%, transparent 50%);
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+
+        .slide h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .slide h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--primary-purple);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .slide h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .glow-text {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 20px rgba(2, 132, 199, 0.3);
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { 
+                color: var(--neon-cyan);
+                text-shadow: 0 0 20px rgba(2, 132, 199, 0.3);
+            }
+            to { 
+                color: var(--neon-pink);
+                text-shadow: 0 0 20px rgba(190, 24, 93, 0.3);
+            }
+        }
+
+        .slide p {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .slide ul {
+            list-style: none;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--text-secondary);
+            max-width: 700px;
+        }
+
+        .slide li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .slide li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--accent-purple);
+            font-weight: bold;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: 100%;
+            align-items: start;
+        }
+
+        .card {
+            background: var(--lighter-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--neon-cyan);
+        }
+
+        .quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--primary-purple);
+            text-align: center;
+            padding: 2rem;
+            border-left: 4px solid var(--accent-purple);
+            background: var(--lighter-bg);
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .quote-author {
+            font-size: 1.2rem;
+            font-style: normal;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-purple);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(107, 70, 193, 0.3);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slide-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+            transition: width 0.3s ease;
+            z-index: 1000;
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.1;
+        }
+
+        .hero-slide {
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.8) 0%, 
+                rgba(51, 65, 85, 0.9) 100%);
+            color: white;
+        }
+
+        .hero-slide h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-slide .highlight {
+            color: #00f5ff;
+            background: none;
+            -webkit-text-fill-color: #00f5ff;
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+
+        .hero-slide p {
+            color: #e2e8f0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 2rem;
+                width: 95%;
+                height: 95%;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .slide h1 {
+                font-size: 2rem;
+            }
+            
+            .slide p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg" id="matrix-animation"></div>
+    <div class="slide-progress" id="progress"></div>
+    
+    <!-- Slide 1: Title -->
+    <div class="slide-container">
+        <div class="slide active hero-slide">
+            <div class="slide-number">1 / 13</div>
+            <h1>When <span class="highlight glow-text">Coding</span> Meets <span class="highlight glow-text">Culture</span></h1>
+            <p>Exploring the intersection of digital tools and humanistic inquiry</p>
+            <p style="margin-top: 2rem; font-size: 1.2rem; opacity: 0.8;">WRIT 20833 • Introduction to Coding in the Humanities • Fall 2025</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Welcome -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">2 / 12</div>
+            <h1>Welcome to the <span class="highlight">Digital Humanities</span></h1>
+            <p>Where technology becomes a lens for understanding human culture, creativity, and meaning.</p>
+            <div class="quote">
+                "The humanities are the stories we tell ourselves about ourselves. Digital humanities asks: what new stories can we discover when we use computational methods to explore these narratives?"
+                <div class="quote-author">— Adapted from Digital Humanities scholars</div>
+            </div>
+            <p style="margin-top: 2rem; font-size: 1.2rem;">Today we'll explore how coding becomes a tool for cultural inquiry, not just technical problem-solving.</p>
+        </div>
+    </div>
+
+    <!-- Slide 3: What is Digital Humanities? -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">3 / 12</div>
+            <h2>What is <span class="highlight">Digital Humanities</span>?</h2>
+            <p style="margin-bottom: 2rem;">Digital Humanities is not about replacing traditional methods—it's about expanding our toolkit for understanding human culture.</p>
+            <div class="two-column">
+                <div class="card">
+                    <h3>Traditional Humanities</h3>
+                    <ul>
+                        <li>Close reading of texts</li>
+                        <li>Historical analysis</li>
+                        <li>Cultural interpretation</li>
+                        <li>Qualitative research</li>
+                        <li>Narrative storytelling</li>
+                        <li>Individual expertise</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Digital Methods</h3>
+                    <ul>
+                        <li>Computational text analysis</li>
+                        <li>Data visualization</li>
+                        <li>Network analysis</li>
+                        <li>Digital archives</li>
+                        <li>Interactive narratives</li>
+                        <li>Collaborative research</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; text-align: center; font-style: italic;">The goal: Use both approaches together to ask deeper questions about human experience.</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: Why Code in the Humanities? -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">4 / 12</div>
+            <h2>Why <span class="highlight">Code</span> in the Humanities?</h2>
+            <p style="margin-bottom: 2rem;">Coding gives us superpowers for cultural analysis:</p>
+            <ul>
+                <li><strong>Scale:</strong> Analyze thousands of documents at once (imagine reading every 19th-century novel!)</li>
+                <li><strong>Pattern Recognition:</strong> Discover hidden connections across time and space</li>
+                <li><strong>Visualization:</strong> Make abstract concepts tangible and shareable</li>
+                <li><strong>Preservation:</strong> Digitize and protect cultural heritage for future generations</li>
+                <li><strong>Accessibility:</strong> Make knowledge more democratic and inclusive</li>
+                <li><strong>New Questions:</strong> Ask what wasn't possible before technology</li>
+                <li><strong>Collaboration:</strong> Work across disciplines and institutions</li>
+            </ul>
+            <div class="quote" style="margin-top: 2rem; font-size: 1.3rem;">
+                "We're not just using computers to do humanities faster—we're using them to do humanities differently."
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Examples in Action -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">5 / 12</div>
+            <h2><span class="highlight">Real-World</span> Examples</h2>
+            <p style="margin-bottom: 2rem;">Let's see digital humanities in action:</p>
+            <div class="two-column">
+                <div>
+                    <h3>Literary Analysis</h3>
+                    <p><strong>Project:</strong> "Emotional Arcs of Stories" - Analyzing sentiment patterns in 1,700 stories to understand narrative structure</p>
+                    <div class="code-block">
+// Analyze emotional arcs
+for (book in library) {
+  emotions = analyzeSentiment(book);
+  plotEmotionalJourney(emotions);
+  findCommonPatterns();
+}
+
+// Discover: Most stories follow 
+// 6 basic emotional shapes!
+                    </div>
+                    <p><strong>Discovery:</strong> Most stories follow one of six basic emotional trajectories</p>
+                </div>
+                <div>
+                    <h3>Historical Networks</h3>
+                    <p><strong>Project:</strong> "Republic of Letters" - Mapping 18th-century intellectual networks through 55,000 letters</p>
+                    <div class="code-block">
+// Build social networks
+connections = findMentions(letters);
+network = buildGraph(connections);
+visualizeNetwork(network);
+
+// Reveal: Hidden influence 
+// patterns across Europe
+                    </div>
+                    <p><strong>Discovery:</strong> Voltaire wasn't as central to Enlightenment networks as previously thought</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: More DH Examples -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">6 / 13</div>
+            <h2>More <span class="highlight">Inspiring</span> Projects</h2>
+            <div class="two-column">
+                <div class="card">
+                    <h3>📸 Photogrammar</h3>
+                    <p>Mapped 170,000 photographs from the Great Depression using geolocation and machine learning</p>
+                    <p><strong>Insight:</strong> Revealed how government photographers shaped public perception of rural America</p>
+                </div>
+                <div class="card">
+                    <h3>🎵 Music Timeline</h3>
+                    <p>Analyzed Billboard hits from 1958-2012 to track musical evolution</p>
+                    <p><strong>Discovery:</strong> Found the exact moment hip-hop revolutionized popular music (1991)</p>
+                </div>
+            </div>
+            <div class="two-column" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>🏛️ Rome Reborn</h3>
+                    <p>3D reconstruction of ancient Rome using archaeological data and computer modeling</p>
+                    <p><strong>Impact:</strong> Students can walk through the Forum as it was 2000 years ago</p>
+                </div>
+                <div class="card">
+                    <h3>📖 Open Syllabus</h3>
+                    <p>Analyzed millions of college syllabi to map the "canon" of higher education</p>
+                    <p><strong>Revelation:</strong> Plato is assigned more than any other author worldwide</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Cultural Data -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">6 / 12</div>
+            <h2>Culture as <span class="highlight">Data</span></h2>
+            <p>Everything cultural can become computational:</p>
+            <ul>
+                <li><strong>Texts:</strong> Novels, poems, newspapers, social media</li>
+                <li><strong>Images:</strong> Paintings, photographs, films, memes</li>
+                <li><strong>Audio:</strong> Music, speeches, oral histories</li>
+                <li><strong>Spatial:</strong> Maps, architecture, movement patterns</li>
+                <li><strong>Networks:</strong> Social connections, influence patterns</li>
+            </ul>
+            <p style="margin-top: 2rem; font-style: italic;">The question becomes: What stories do these patterns tell?</p>
+        </div>
+    </div>
+
+    <!-- Slide 8: The Intersection -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">8 / 13</div>
+            <h2>Where They <span class="highlight">Meet</span></h2>
+            <div class="quote">
+                "Coding is not just about automation—it's about asking new kinds of questions about human experience and finding innovative ways to explore meaning."
+            </div>
+            <div class="two-column" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>🧠 Humanistic Thinking</h3>
+                    <ul>
+                        <li>Critical thinking & interpretation</li>
+                        <li>Understanding context & meaning</li>
+                        <li>Ethical considerations</li>
+                        <li>Cultural sensitivity</li>
+                        <li>Nuanced analysis</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>💻 Computational Thinking</h3>
+                    <ul>
+                        <li>Pattern recognition</li>
+                        <li>Systematic problem-solving</li>
+                        <li>Data analysis & visualization</li>
+                        <li>Algorithm design</li>
+                        <li>Scale & efficiency</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; text-align: center; font-size: 1.3rem; color: var(--primary-purple);">
+                <strong>Together:</strong> They create new ways of understanding human culture and experience.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 9: Tools We'll Explore -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">9 / 13</div>
+            <h2>Tools We'll <span class="highlight">Explore</span></h2>
+            <p style="margin-bottom: 2rem;">Don't worry—we'll start simple and build up gradually:</p>
+            <div class="two-column">
+                <div>
+                    <h3>🐍 Programming Languages</h3>
+                    <ul>
+                        <li><strong>Python:</strong> Text analysis, data processing, machine learning</li>
+                        <li><strong>JavaScript:</strong> Interactive web visualizations, dynamic content</li>
+                        <li><strong>R:</strong> Statistical analysis, data visualization</li>
+                        <li><strong>HTML/CSS:</strong> Digital presentation, web publishing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>🔧 Digital Methods</h3>
+                    <ul>
+                        <li><strong>Text mining:</strong> Extract insights from large text collections</li>
+                        <li><strong>Data visualization:</strong> Make patterns visible and compelling</li>
+                        <li><strong>Web scraping:</strong> Gather data from online sources</li>
+                        <li><strong>Digital storytelling:</strong> Create interactive narratives</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; text-align: center; font-style: italic;">
+                Remember: These are tools to help you explore questions you care about—not ends in themselves.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 10: Course Journey -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">10 / 13</div>
+            <h2>Our <span class="highlight">Journey</span> Together</h2>
+            <p style="margin-bottom: 2rem;">We'll build skills progressively, always connecting technical concepts to humanistic questions:</p>
+            <ul>
+                <li><strong>Weeks 1-3:</strong> Foundations of computational thinking & basic programming concepts</li>
+                <li><strong>Weeks 4-6:</strong> Text analysis & exploring digital archives and databases</li>
+                <li><strong>Weeks 7-9:</strong> Data visualization & creating compelling visual narratives</li>
+                <li><strong>Weeks 10-12:</strong> Web development for humanities & building digital projects</li>
+                <li><strong>Weeks 13-15:</strong> Final projects & presentations showcasing your work</li>
+            </ul>
+            <div class="quote" style="margin-top: 2rem;">
+                "Each step builds on the last, from curiosity to creation to sharing your discoveries with the world."
+            </div>
+            <p style="margin-top: 1.5rem; text-align: center;">
+                <strong>Philosophy:</strong> Learn by doing, guided by questions that matter to you.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 11: Skills You'll Gain -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">11 / 13</div>
+            <h2>Skills You'll <span class="highlight">Gain</span></h2>
+            <p style="margin-bottom: 2rem;">These skills will transform how you approach research, analysis, and creative work:</p>
+            <div class="two-column">
+                <div class="card">
+                    <h3>🛠️ Technical Skills</h3>
+                    <ul>
+                        <li>Basic programming in Python & JavaScript</li>
+                        <li>Data collection, cleaning & analysis</li>
+                        <li>Web development & digital publishing</li>
+                        <li>Project management & version control</li>
+                        <li>Database querying & API usage</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🎯 Critical Skills</h3>
+                    <ul>
+                        <li>Computational thinking & problem decomposition</li>
+                        <li>Digital literacy & tool evaluation</li>
+                        <li>Research project design & methodology</li>
+                        <li>Interdisciplinary collaboration</li>
+                        <li>Ethical considerations in digital work</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="quote" style="margin-top: 2rem;">
+                "You'll leave this course not just knowing how to code, but understanding how to think computationally about humanistic problems."
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 12: Questions for Reflection -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">12 / 13</div>
+            <h2>Questions for <span class="highlight">Reflection</span></h2>
+            <p style="margin-bottom: 2rem;">Let's start thinking like digital humanists. Consider these questions:</p>
+            <ul>
+                <li><strong>Personal Interest:</strong> What aspects of culture or human experience intrigue you most?</li>
+                <li><strong>Computational Possibilities:</strong> How might computational methods reveal new insights about these areas?</li>
+                <li><strong>Ethical Considerations:</strong> What ethical considerations arise when we quantify human culture?</li>
+                <li><strong>Humanistic Values:</strong> How can technology serve humanistic values and goals?</li>
+                <li><strong>Research Questions:</strong> What questions would you love to explore if you had the right tools?</li>
+                <li><strong>Collaboration:</strong> How might digital tools help you collaborate across disciplines?</li>
+            </ul>
+            <div class="quote" style="margin-top: 2rem; font-size: 1.3rem;">
+                "The best digital humanities projects start with a burning question about human experience—not with a cool technology."
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 13: Let's Begin -->
+    <div class="slide-container">
+        <div class="slide hero-slide">
+            <div class="slide-number">13 / 13</div>
+            <h1>Let's <span class="highlight glow-text">Begin</span></h1>
+            <p>Welcome to Introduction to Coding in the Humanities</p>
+            <p style="margin-top: 2rem; font-size: 1.3rem;">Where curiosity meets computation, and culture meets code.</p>
+            <div style="margin-top: 3rem; font-size: 1.1rem; opacity: 0.8;">
+                <p>Ready to see the humanities through a new lens?</p>
+                <p style="margin-top: 1rem;">Ready to ask questions that couldn't be asked before?</p>
+                <p style="margin-top: 1rem;">Ready to discover patterns hidden in human culture?</p>
+            </div>
+            <div style="margin-top: 2rem; font-size: 1.2rem; color: #00f5ff;">
+                <p><strong>Let's explore together.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button class="btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n].classList.add('active');
+            
+            // Update progress bar
+            const progress = ((n + 1) / totalSlides) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+            
+            // Update button states
+            document.getElementById('prevBtn').disabled = (n === 0);
+            document.getElementById('nextBtn').disabled = (n === totalSlides - 1);
+        }
+        
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            showSlide(currentSlide);
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                if (currentSlide < totalSlides - 1) changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                if (currentSlide > 0) changeSlide(-1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                currentSlide = 0;
+                showSlide(currentSlide);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                currentSlide = totalSlides - 1;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // Initialize
+        showSlide(0);
+        
+        // Simple matrix animation for background
+        function setup() {
+            let canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent('matrix-animation');
+        }
+        
+        function draw() {
+            clear();
+            // Simple flowing particles
+            for (let i = 0; i < 20; i++) {
+                let x = (frameCount * 0.5 + i * 50) % width;
+                let y = (sin(frameCount * 0.01 + i) * 20 + height / 2);
+                fill(107, 70, 193, 30);
+                noStroke();
+                ellipse(x, y, 3, 3);
+            }
+        }
+        
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+    </script>
+</body>
+</html>
