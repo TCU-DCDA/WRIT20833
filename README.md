@@ -138,4 +138,32 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *This website represents the intersection of humanities scholarship and computational thinking, embodying the core principles taught in WRIT 20833.*
 
+## 🎨 Banner System
+
+The website uses a unified banner system for consistent visual hierarchy across all pages:
+
+### Banner Types
+
+- **Full Hero Banner** (`hero-banner--full`): Homepage with P5.js animation
+- **Medium Banner** (`hero-banner--medium`): Content pages like syllabus
+- **Minimal Banner** (`hero-banner--minimal`): Utility pages like policies
+
+### Banner Overlays
+
+- `hero-banner--dark-overlay`: Dark overlay for better text contrast
+- `hero-banner--purple-overlay`: Purple-themed overlay matching brand colors
+
+### Usage Example
+
+```html
+<section class="hero-banner hero-banner--medium hero-banner--dark-overlay">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">Page <span class="highlight">Title</span></h1>
+      <p class="hero-subtitle">Subtitle text</p>
+    </div>
+  </div>
+</section>
+```
+
 
