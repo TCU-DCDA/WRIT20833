@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRIT 20833 - Lecture 1 Full</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: linear-gradient(135deg, #1a0330, #2d1b5e, #1a0330);
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .slide-container {
+            display: none;
+            height: 100vh;
+            padding: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container.active {
+            display: flex;
+        }
+
+        .slide {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #c9a9ff, #9b59b6, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            color: #c9a9ff;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2rem;
+            color: #b19cd9;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #e8e8e8;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #b19cd9;
+            margin-bottom: 2.5rem;
+        }
+
+        .highlight {
+            color: #c9a9ff;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #c9a9ff;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid #c9a9ff;
+            background: rgba(201, 169, 255, 0.1);
+            text-align: left;
+        }
+
+        .citation {
+            font-size: 1.2rem;
+            color: #b19cd9;
+            margin-top: 1rem;
+        }
+
+        .slide-image {
+            max-width: 100%;
+            max-height: 400px;
+            margin: 1rem auto 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(201, 169, 255, 0.3);
+            display: block;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(201, 169, 255, 0.2);
+            border: 1px solid #c9a9ff;
+            color: #c9a9ff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+            transition: background 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(201, 169, 255, 0.3);
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-family: 'Orbitron', monospace;
+            color: #c9a9ff;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            color: #e8e8e8;
+            padding-left: 0.5rem;
+        }
+
+        .instructor-info {
+            font-size: 1.4rem;
+            color: #b19cd9;
+            margin-top: 1.5rem;
+        }
+
+        .content-section {
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .centered-title {
+            text-align: center;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            background: rgba(201, 169, 255, 0.2);
+            border: 2px solid #c9a9ff;
+            border-radius: 8px;
+            color: #c9a9ff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: rgba(201, 169, 255, 0.4);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201, 169, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="slide-number">1 / 18</div>
+            <h1>WRIT 20833<br>Intro to Coding in the Humanities</h1>
+            <img src="images/slide_01_image_1.png" alt="Course Title" class="slide-image">
+            <div class="instructor-info">Dr. Curt Rode • Dr. Brad Lucas</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Semester Overview -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">2 / 18</div>
+            <div class="centered-title">
+                <h2>Semester <span class="highlight">Overview</span></h2>
+                <p class="subtitle">Instruction, Readings, Assignments</p>
+            </div>
+            <div class="content-section">
+                <ul>
+                    <li><strong>September:</strong> Python Basics</li>
+                    <li><strong>October:</strong> Introduction to Cultural Analytics & Python</li>
+                    <li><strong>November:</strong> Methods & Web Dev Basics</li>
+                    <li><strong>December:</strong> Research</li>
+                    <li><strong>Assignments:</strong> SR1, SR2, SR3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Nick Montfort Quote -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">3 / 18</div>
+            <div class="centered-title">
+                <h2>Nick Montfort: <span class="highlight">On Learning to Code</span></h2>
+            </div>
+            <img src="images/slide_03_image_1.jpg" alt="Nick Montfort Quote" class="slide-image">
+            <div class="quote">
+                According to Nick Montfort, learning how to code in the humanities:
+                <br><br>
+                • Allows us to think in new ways<br>
+                • Offers us a better understanding of culture and media systems<br>
+                • Can help us improve society
+            </div>
+            <div class="citation">Exploratory Programming for the Arts and Humanities (321)</div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Douglas Rushkoff Quote -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">4 / 18</div>
+            <div class="centered-title">
+                <h2>Douglas Rushkoff: <span class="highlight">Capabilities</span></h2>
+            </div>
+            <img src="images/slide_04_image_1.jpg" alt="Douglas Rushkoff Quote" class="slide-image">
+            <div class="quote">
+                "[T]he underlying capability of the computer era is actually programming—which almost none of us know how to do. We simply use the programs that have been made for us, and enter our text in the appropriate box on the screen. We teach kids how to use software to write, but not how to write software. This means they have access to the capabilities given to them by others, but not the power to determine the value-creating capabilities of these technologies for themselves."
+            </div>
+            <div class="citation">Douglas Rushkoff, qtd in Nick Montfort's Exploratory Programming for the Arts and Humanities, 327-28</div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Humanities -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">5 / 18</div>
+            <h1><span class="highlight">Humanities</span></h1>
+            <img src="images/slide_05_image_1.png" alt="Humanities Concept" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 6: Close Reading -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">6 / 18</div>
+            <h1><span class="highlight">Close Reading</span></h1>
+            <img src="images/slide_06_image_1.png" alt="Close Reading" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 7: Distant Reading -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">7 / 18</div>
+            <h1><span class="highlight">Distant Reading</span></h1>
+            <img src="images/slide_07_image_1.png" alt="Distant Reading" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 8: Trucks and Beer -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">8 / 18</div>
+            <h1><span class="highlight">Trucks and Beer</span></h1>
+            <img src="images/slide_08_image_1.png" alt="Trucks and Beer Analysis" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 9: Girl and Love in Country Music -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">9 / 18</div>
+            <h1>"<span class="highlight">Girl</span>" and "<span class="highlight">Love</span>" in Country Music</h1>
+            <img src="images/slide_09_image_1.png" alt="Girl and Love in Country Music" class="slide-image">
+            <a href="https://www.johnwmillr.com/trucks-and-beer/" target="_blank" class="project-link">
+                🔗 View Interactive Project
+            </a>
+        </div>
+    </div>
+
+    <!-- Slide 10: Hip Hop Vocabulary -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">10 / 18</div>
+            <h1>The Largest <span class="highlight">Vocabulary</span> in Hip Hop</h1>
+            <img src="images/slide_10_image_1.png" alt="Hip Hop Vocabulary Analysis" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 11: Unique Words Analysis -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">11 / 18</div>
+            <h1># of <span class="highlight">Unique Words</span> in First 35K Lyrics</h1>
+            <img src="images/slide_11_image_1.png" alt="Unique Words Analysis" class="slide-image">
+            <a href="https://pudding.cool/2017/02/vocabulary/" target="_blank" class="project-link">
+                🔗 View Interactive Project
+            </a>
+        </div>
+    </div>
+
+    <!-- Slide 12: Gendered Language -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">12 / 18</div>
+            <h1><span class="highlight">Gendered Language</span> in Teacher Reviews</h1>
+            <img src="images/slide_12_image_1.png" alt="Gendered Language Analysis" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 13: Text You A Pile of Poo -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">13 / 18</div>
+            <h1><span class="highlight">Text You A Pile of Poo</span></h1>
+            <img src="images/slide_13_image_1.png" alt="Text You A Pile of Poo" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 14: Second-Class Languages -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">14 / 18</div>
+            <h1><span class="highlight">Second-Class Languages</span></h1>
+            <img src="images/slide_14_image_1.png" alt="Second-Class Languages" class="slide-image">
+        </div>
+    </div>
+
+    <!-- Slide 15: Rethink Binaries -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">15 / 18</div>
+            <h1>Rethink <span class="highlight">Binaries and Hierarchies</span></h1>
+            <img src="images/slide_15_image_1.png" alt="Rethink Binaries" class="slide-image">
+            <p class="citation">Reference: https://data-feminism.mitpress.mit.edu/pub/h1w0nbqp/release/3</p>
+        </div>
+    </div>
+
+    <!-- Slide 16: Facebook Account -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">16 / 18</div>
+            <h1><span class="highlight">Facebook Account</span> Gender Binaries</h1>
+            <img src="images/slide_16_image_1.png" alt="Facebook Gender Binary" class="slide-image">
+            <div class="quote">
+                Facebook continues to resolve users' genders into a binary: either "male" or "female." This decision was made so that Facebook could allow its primary clients—advertisers—to more easily market to one gender or the other. Even if you can choose the gender that you show to your Facebook friends, you can't change the gender that Facebook provides to its paying customers.
+            </div>
+            <div class="citation">Source: https://data-feminism.mitpress.mit.edu/pub/h1w0nbqp/release/3</div>
+        </div>
+    </div>
+
+    <!-- Slide 17: Positive Voices Survey -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">17 / 18</div>
+            <h1><span class="highlight">Positive Voices Survey</span></h1>
+            <img src="images/slide_17_image_1.png" alt="Positive Voices Survey" class="slide-image">
+            <div class="quote">
+                A recent alternative to the binary, developed by Public Health England in collaboration with LGBTQ+ organizations in the United Kingdom. This two-item questionnaire was designed for use in routine national surveillance of HIV in England and Wales to determine self-identified gender and cis or trans status. The designers offer three named genders, a catch-all fourth category, and an option for not disclosing gender identity.
+            </div>
+            <div class="citation">Source: https://data-feminism.mitpress.mit.edu/pub/h1w0nbqp/release/3</div>
+        </div>
+    </div>
+
+    <!-- Slide 18: Coding is Political -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">18 / 18</div>
+            <h1><span class="highlight">Coding is Political</span></h1>
+            <img src="images/slide_18_image_1.png" alt="Coding is Political" class="slide-image">
+            <div class="citation">(Eric Matthes)</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (endX < startX - 50) {
+                nextSlide();
+            }
+            if (endX > startX + 50) {
+                previousSlide();
+            }
+        }
+    </script>
+</body>
+</html>
