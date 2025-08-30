@@ -110,8 +110,8 @@ p {
 /* 2-column layout for image + content */
 .two-column-layout {
     display: grid;
-    grid-template-columns: 45% 55%;
-    gap: 3rem;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
     align-items: center;
     margin: 2rem 0;
     height: fit-content;
@@ -120,16 +120,16 @@ p {
 .image-column {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     padding: 1rem;
 }
 
 .image-column img {
-    max-width: 90%;
+    max-width: 100%;
     width: auto;
     height: auto;
-    max-height: 400px;
+    max-height: 500px;
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(201, 169, 255, 0.3);
@@ -140,8 +140,9 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 1rem 0;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 .content-column > * {
@@ -151,14 +152,16 @@ p {
 .content-column h3,
 .content-column h4 {
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
 }
 
 .content-column .transition-text,
 .content-column .key-insight,
 .content-column .shared-anxiety {
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
+    font-size: 1rem;
 }
 
 .slide-number {
@@ -193,25 +196,25 @@ p {
 
 .definition-box {
     background: rgba(155, 89, 182, 0.2);
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 1.25rem;
+    border-radius: 8px;
     border-left: 4px solid #9b59b6;
-    margin: 2rem 0;
+    margin: 1rem 0;
     text-align: left;
 }
 
 .definition {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .example-box {
     background: rgba(201, 169, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 6px;
     border: 1px solid #c9a9ff;
-    margin: 2rem 0;
+    margin: 1rem 0;
     text-align: left;
 }
 
@@ -225,8 +228,8 @@ p {
 
 .comparison-box {
     background: rgba(201, 169, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 6px;
     border: 1px solid #c9a9ff;
     text-align: left;
     height: fit-content;
@@ -237,8 +240,8 @@ p {
 
 .comparison-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin: 1rem 0;
     align-items: stretch;
 }
@@ -249,9 +252,9 @@ p {
 }
 
 .comparison-box li {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
     position: relative;
 }
 
@@ -275,11 +278,11 @@ p {
 
 .key-insight {
     background: linear-gradient(45deg, rgba(201, 169, 255, 0.2), rgba(155, 89, 182, 0.2));
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 1rem;
+    border-radius: 8px;
     border: 2px solid #c9a9ff;
-    margin-top: 2rem;
-    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -316,8 +319,8 @@ p {
 
 .violation-box {
     background: rgba(201, 169, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 6px;
     border: 1px solid #c9a9ff;
     text-align: left;
     height: fit-content;
@@ -332,9 +335,9 @@ p {
 }
 
 .violation-box li {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
     position: relative;
 }
 
@@ -412,16 +415,16 @@ p {
 
 .enforcement-comparison {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin: 1rem 0;
     align-items: stretch;
 }
 
 .enforcement-item {
     background: rgba(201, 169, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 6px;
     border: 1px solid #c9a9ff;
     text-align: left;
     height: fit-content;
@@ -436,9 +439,9 @@ p {
 }
 
 .enforcement-item li {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
     position: relative;
 }
 
