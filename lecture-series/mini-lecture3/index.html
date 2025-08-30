@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Lecture 3: Agentic Coding - Power or Pseudo-Agency? - WRIT 20833</title>
+    <!-- Updated for GitHub Pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Slide 1: Title/Hook -->
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="slide-number">1 / 8</div>
+            <h1>Agentic Coding</h1>
+            <p class="subtitle">Power or Pseudo-Agency?</p>
+            <img src="../images/JPEG/AI-Box_Pulling_HandsofCoder.jpg" alt="AI assistance in coding" class="slide-image">
+            
+            <div class="hook-demo">
+                <h3>🤖 Live Demo Scenario</h3>
+                <div class="demo-box">
+                    <p><strong>"Hey AI, write me 10 lines of Python to analyze text sentiment."</strong></p>
+                    <div class="code-block">
+                        <pre><code>import nltk
+from textblob import TextBlob
+
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    polarity = blob.sentiment.polarity
+    if polarity > 0:
+        return "Positive"
+    elif polarity < 0:
+        return "Negative"
+    else:
+        return "Neutral"</code></pre>
+                    </div>
+                    <div class="critical-question">
+                        <h2 style="color: #c9a9ff; font-size: 2rem; margin: 1rem 0;">
+                            "Do you understand each line?"
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructor-info">WRIT 20833 • Mini-Lecture 3</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: The Promise -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">2 / 8</div>
+            <h2>The <span class="highlight">Promise</span></h2>
+            <img src="../images/JPEG/doesAgenticLead_Autonomy.jpg" alt="AI democratizing coding" class="slide-image-small">
+            
+            <div class="promise-grid">
+                <div class="promise-item">
+                    <h4>🚪 Lower Barriers</h4>
+                    <p>No need for years of training to build something functional</p>
+                </div>
+                
+                <div class="promise-item">
+                    <h4>⚡ Enable Action</h4>
+                    <p>Get working code without mastering every syntax detail</p>
+                </div>
+                
+                <div class="promise-item">
+                    <h4>🎯 Focus on Problems</h4>
+                    <p>Spend time on logic and goals, not memorizing APIs</p>
+                </div>
+                
+                <div class="promise-item">
+                    <h4>🌍 Democratize Creation</h4>
+                    <p>More people can participate in digital tool-making</p>
+                </div>
+            </div>
+
+            <div class="promise-statement">
+                <h3>The Vision:</h3>
+                <p><strong>"AI assistance could democratize coding power, letting anyone participate in creating digital systems."</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: The Risks -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">3 / 8</div>
+            <h2>The <span class="highlight">Risks</span></h2>
+            <img src="../images/JPEG/AI_confessional.jpg" alt="AI dependency concerns" class="slide-image-small">
+            
+            <div class="risks-grid">
+                <div class="risk-item black-box">
+                    <h4>📦 Black Box Problem</h4>
+                    <p>You get code that works, but don't understand how or why</p>
+                    <div class="risk-example">
+                        <em>"It works on my test data, but will it work on real data with edge cases?"</em>
+                    </div>
+                </div>
+                
+                <div class="risk-item dependency">
+                    <h4>🔗 Dependency Trap</h4>
+                    <p>Reliance on AI for every coding task—what happens when it's wrong?</p>
+                    <div class="risk-example">
+                        <em>"I can't debug this because I didn't write it myself."</em>
+                    </div>
+                </div>
+                
+                <div class="risk-item platform-power">
+                    <h4>🏢 Platform Power</h4>
+                    <p>Coding power concentrates in whoever controls the AI tools</p>
+                    <div class="risk-example">
+                        <em>"What biases are baked into the AI's training data?"</em>
+                    </div>
+                </div>
+                
+                <div class="risk-item pseudo-agency">
+                    <h4>🎭 Pseudo-Agency</h4>
+                    <p>Feeling empowered while actually being more dependent</p>
+                    <div class="risk-example">
+                        <em>"I 'built' this, but I can't modify or maintain it."</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Real Scenarios -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">4 / 8</div>
+            <h2>Real <span class="highlight">Scenarios</span></h2>
+            <img src="../images/JPEG/agentic_autonomy2.jpg" alt="Real coding scenarios" class="slide-image-small">
+            
+            <div class="scenarios">
+                <div class="scenario good">
+                    <h4>✅ Empowering Scenario</h4>
+                    <div class="scenario-content">
+                        <p><strong>Student:</strong> "I want to analyze bias in news headlines."</p>
+                        <p><strong>AI helps with:</strong> Data loading, basic text processing</p>
+                        <p><strong>Student contributes:</strong> Research question, bias definition, interpretation of results</p>
+                        <p><strong>Result:</strong> Student understands the process and can modify/extend it</p>
+                    </div>
+                </div>
+                
+                <div class="scenario problematic">
+                    <h4>⚠️ Problematic Scenario</h4>
+                    <div class="scenario-content">
+                        <p><strong>Student:</strong> "Build me a recommendation system."</p>
+                        <p><strong>AI generates:</strong> Complete black-box solution</p>
+                        <p><strong>Student contributes:</strong> Copy-paste, submit</p>
+                        <p><strong>Result:</strong> Student can't explain how it works or what biases it might have</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-difference">
+                <p><strong>Key Difference:</strong> Using AI as a <em>scaffold</em> vs. using AI as a <em>replacement</em> for understanding</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: The Nuance -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">5 / 8</div>
+            <h2>The <span class="highlight">Nuance</span></h2>
+            <img src="../images/JPEG/nuance.png" alt="Balanced AI assistance" class="slide-image-small">
+            
+            <div class="nuance-framework">
+                <div class="pedagogy-box">
+                    <h3>🎓 With Right Pedagogy</h3>
+                    <div class="pedagogy-practices">
+                        <div class="practice">
+                            <h4>Scaffold, Don't Replace</h4>
+                            <ul>
+                                <li>AI handles boilerplate, you handle logic</li>
+                                <li>Explain every AI-generated line</li>
+                                <li>Test edge cases AI might miss</li>
+                                <li>Modify and extend AI suggestions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="practice">
+                            <h4>Critical Engagement</h4>
+                            <ul>
+                                <li>Question AI assumptions and biases</li>
+                                <li>Understand when and why code fails</li>
+                                <li>Learn to debug AI-generated code</li>
+                                <li>Maintain agency over the final product</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="without-pedagogy-box">
+                    <h3>⚠️ Without Careful Pedagogy</h3>
+                    <div class="danger-list">
+                        <div class="danger-item">
+                            <h4>🏃‍♂️ Shortcuts to Nowhere</h4>
+                            <p>Students get results without understanding process</p>
+                        </div>
+                        <div class="danger-item">
+                            <h4>🤖 AI Ventriloquism</h4>
+                            <p>AI speaks through students—they can't speak for themselves</p>
+                        </div>
+                        <div class="danger-item">
+                            <h4>📉 Eroded Agency</h4>
+                            <p>Feeling productive while becoming more dependent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Language vs. Ventriloquism -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">6 / 8</div>
+            <h2>Learning a Language vs. <span class="highlight">Letting Someone Speak for You</span></h2>
+            <img src="../images/JPEG/AI_confessional.jpg" alt="Language vs ventriloquism" class="slide-image-small">
+            
+            <div class="language-comparison">
+                <div class="language-side">
+                    <h3>🗣️ Learning a Language</h3>
+                    <div class="language-features">
+                        <div class="feature">
+                            <h4>Understanding</h4>
+                            <p>You know what each piece does and why</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Adaptation</h4>
+                            <p>You can modify for new situations</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Debugging</h4>
+                            <p>You can fix problems when they arise</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Agency</h4>
+                            <p>You make informed choices about implementation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ventriloquism-side">
+                    <h3>🎭 Ventriloquism</h3>
+                    <div class="ventriloquism-features">
+                        <div class="feature">
+                            <h4>Black Box</h4>
+                            <p>Code works but you don't know how</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Rigidity</h4>
+                            <p>Can't adapt to new requirements</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Helplessness</h4>
+                            <p>When it breaks, you're stuck</p>
+                        </div>
+                        <div class="feature">
+                            <h4>Dependency</h4>
+                            <p>AI makes all the choices for you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="central-question">
+                <h3>💭 The Central Question</h3>
+                <p><strong>"Are you learning to think computationally, or just outsourcing computational thinking?"</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: What This Means for You -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">7 / 8</div>
+            <h2>What This Means for <span class="highlight">You</span></h2>
+            <img src="../images/JPEG/agentic_autonomy2.jpg" alt="Personal coding agency" class="slide-image-small">
+            
+            <div class="implications">
+                <div class="implication empowerment">
+                    <h3>💪 Potential for Empowerment</h3>
+                    <ul>
+                        <li>AI can help you build things faster than ever</li>
+                        <li>Lower barrier to entry for digital humanities projects</li>
+                        <li>Focus energy on research questions, not syntax</li>
+                        <li>Participate in conversations about algorithmic society</li>
+                    </ul>
+                </div>
+                
+                <div class="implication vigilance">
+                    <h3>👁️ Need for Vigilance</h3>
+                    <ul>
+                        <li>Always understand what AI-generated code does</li>
+                        <li>Test assumptions and edge cases</li>
+                        <li>Maintain ability to code without AI assistance</li>
+                        <li>Question the biases in AI training data</li>
+                    </ul>
+                </div>
+                
+                <div class="implication responsibility">
+                    <h3>🎯 Your Responsibility</h3>
+                    <ul>
+                        <li>Use AI as a tool, not a crutch</li>
+                        <li>Develop critical thinking about code</li>
+                        <li>Advocate for ethical AI development</li>
+                        <li>Help others use AI responsibly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Reflection and Future -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">8 / 8</div>
+            <h2>Your <span class="highlight">Choice</span></h2>
+            <img src="../images/JPEG/doesAgenticLead_Autonomy.jpg" alt="Future of agentic coding" class="slide-image-small">
+            
+            <div class="choice-framework">
+                <div class="reflection-questions">
+                    <h3>🤔 Reflection Questions</h3>
+                    <div class="questions-grid">
+                        <div class="question-box">
+                            <p><strong>"When you use AI to code, what do you still need to understand yourself?"</strong></p>
+                        </div>
+                        <div class="question-box">
+                            <p><strong>"How can you tell if AI is empowering you or making you more dependent?"</strong></p>
+                        </div>
+                        <div class="question-box">
+                            <p><strong>"What would genuine computational thinking look like in your field?"</strong></p>
+                        </div>
+                        <div class="question-box">
+                            <p><strong>"How might AI-assisted coding change power dynamics in your discipline?"</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-directions">
+                    <h3>🔮 Moving Forward</h3>
+                    <div class="directions">
+                        <div class="direction">
+                            <h4>For This Course</h4>
+                            <p>We'll use AI as a <em>scaffold</em>—helping with setup while you focus on critical analysis and interpretation</p>
+                        </div>
+                        <div class="direction">
+                            <h4>For Your Future</h4>
+                            <p>Consider how coding literacy—with or without AI—can advance your goals and serve your values</p>
+                        </div>
+                        <div class="direction">
+                            <h4>For Society</h4>
+                            <p>Help ensure AI democratizes rather than concentrates power over digital systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="series-conclusion">
+                <h3>🎓 Series Conclusion</h3>
+                <p><strong>From sacred boundaries to digital classification to AI assistance—the through-line is power: who has it, how it's exercised, and how you can participate meaningfully.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation-container">
+        <div class="navigation">
+            <button class="nav-btn" onclick="previousSlide()">←</button>
+            <span class="nav-counter" id="slideCounter">1 / 8</span>
+            <button class="nav-btn" onclick="nextSlide()">→</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            if (n >= totalSlides) { currentSlide = 0; }
+            if (n < 0) { currentSlide = totalSlides - 1; }
+            if (n >= 0 && n < totalSlides) { currentSlide = n; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            
+            const slideCounter = document.getElementById('slideCounter');
+            if (slideCounter) {
+                slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            }
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        let startY = 0;
+        let endY = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.changedTouches[0].screenX;
+            startY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].screenX;
+            endY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+            const minSwipeDistance = 50;
+            
+            // Only register horizontal swipes if they're more horizontal than vertical
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                if (deltaX < 0) {
+                    nextSlide(); // Swipe left = next slide
+                } else {
+                    previousSlide(); // Swipe right = previous slide
+                }
+            }
+        }
+    </script>
+</body>
+</html>

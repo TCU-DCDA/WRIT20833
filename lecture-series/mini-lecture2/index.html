@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Lecture 2: Coding as Classification - WRIT 20833</title>
+    <!-- Updated for GitHub Pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Slide 1: Title/Hook -->
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="slide-number">1 / 8</div>
+            <h1>Coding Taboo Logic</h1>
+            <p class="subtitle">From Sacred Categories to Digital Classification</p>
+            <img src="../images/JPEG/data_as_categorization.jpg" alt="Coding as classification visualization" class="slide-image">
+            
+            <div class="hook-question">
+                <div class="code-block">
+                    <pre><code>if ritually_pure == True:
+    allow_temple_entry()
+else:
+    deny_access()</code></pre>
+                </div>
+                <h2 style="color: #c9a9ff; font-size: 2rem; margin: 2rem 0;">
+                    "Sound familiar? This is how code thinks about people."
+                </h2>
+            </div>
+            
+            <div class="instructor-info">WRIT 20833 • Mini-Lecture 2</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Hook & Stakes -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">2 / 8</div>
+            <h2>Code <span class="highlight">Decides</span></h2>
+            <img src="../images/JPEG/filedrawers_sculpture.jpg" alt="Digital decision making" class="slide-image-small">
+            
+            <div class="stakes-list">
+                <h3>An algorithm decides:</h3>
+                <div class="decision-grid">
+                    <div class="decision-item">📱 Your social media feed</div>
+                    <div class="decision-item">💕 Your dating matches</div>
+                    <div class="decision-item">🏠 Your loan approval</div>
+                    <div class="decision-item">🎓 Your course placement</div>
+                    <div class="decision-item">🏥 Your aid eligibility</div>
+                    <div class="decision-item">⚖️ Your legal risk assessment</div>
+                </div>
+            </div>
+
+            <div class="myth-box">
+                <h4>The Myth of Neutral Code</h4>
+                <p>Every classification system encodes <strong>values</strong> about what matters, what counts, and who belongs where.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Taboo Status as Data -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">3 / 8</div>
+            <h2>Status as <span class="highlight">Data</span></h2>
+            <img src="../images/JPEG/half_digitized_sculpture.jpg" alt="Traditional vs digital status" class="slide-image-small">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                <div class="comparison-box traditional">
+                    <h3>🏛️ Traditional Status Variables</h3>
+                    <ul>
+                        <li><code>virgin</code> / <code>impure</code></li>
+                        <li><code>initiated</code> / <code>uninitiated</code></li>
+                        <li><code>sacred</code> / <code>profane</code></li>
+                        <li><code>noble</code> / <code>commoner</code></li>
+                        <li><code>blessed</code> / <code>cursed</code></li>
+                    </ul>
+                </div>
+                <div class="comparison-box modern">
+                    <h3>💻 Modern Status Variables</h3>
+                    <ul>
+                        <li><code>relationship_status</code></li>
+                        <li><code>credit_score</code></li>
+                        <li><code>criminal_background</code></li>
+                        <li><code>education_level</code></li>
+                        <li><code>employment_status</code></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-insight">
+                <p><strong>Boolean-like variables controlling access:</strong> Then and now, status determines what doors open.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Modern Classification Examples -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">4 / 8</div>
+            <h2>Modern <span class="highlight">Examples</span></h2>
+            <img src="../images/JPEG/data_as_categorization.jpg" alt="Modern classification systems" class="slide-image-small">
+            
+            <div class="code-examples">
+                <div class="code-example-item">
+                    <h4>Loan Approval System</h4>
+                    <div class="code-block">
+                        <pre><code>if credit_score > 650 and income > 50000:
+    approve_loan()
+else:
+    deny_loan()</code></pre>
+                    </div>
+                </div>
+                
+                <div class="code-example-item">
+                    <h4>Dating App Matching</h4>
+                    <div class="code-block">
+                        <pre><code>if age_difference <= 5 and education_match:
+    show_profile()
+else:
+    filter_out()</code></pre>
+                    </div>
+                </div>
+                
+                <div class="code-example-item">
+                    <h4>Course Registration</h4>
+                    <div class="code-block">
+                        <pre><code>if gpa >= 3.0 and prerequisites_met:
+    allow_enrollment()
+else:
+    waitlist_or_deny()</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: From Gossip to Algorithms -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">5 / 8</div>
+            <h2>From Gossip to <span class="highlight">Algorithms</span></h2>
+            <img src="../images/JPEG/filedrawers_sculpture.jpg" alt="Evolution of boundary enforcement" class="slide-image-small">
+            
+            <div class="evolution-comparison">
+                <div class="evolution-item">
+                    <h3>👥 Then: Community Memory</h3>
+                    <ul>
+                        <li>Gossip networks tracked status</li>
+                        <li>Elders remembered transgressions</li>
+                        <li>Social pressure enforced boundaries</li>
+                        <li>Flexible, contextual judgment</li>
+                        <li>Human interpretation of rules</li>
+                    </ul>
+                </div>
+                
+                <div class="evolution-arrow">⬇️</div>
+                
+                <div class="evolution-item">
+                    <h3>🤖 Now: Code Automation</h3>
+                    <ul>
+                        <li>Databases store all interactions</li>
+                        <li>Algorithms remember everything</li>
+                        <li>Automated systems enforce rules</li>
+                        <li>Rigid, binary classifications</li>
+                        <li>Code interpretation of rules</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-point">
+                <p><strong>These aren't just technical decisions—they're political choices about social organization.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Power to Classify -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">6 / 8</div>
+            <h2>Power to <span class="highlight">Classify</span></h2>
+            <img src="../images/JPEG/data_as_categorization.jpg" alt="Classification power dynamics" class="slide-image-small">
+            
+            <div class="power-comparison">
+                <div class="power-box without">
+                    <h3>🚫 Without Coding Literacy</h3>
+                    <div class="power-content">
+                        <p><strong>You are classified BY systems</strong></p>
+                        <ul>
+                            <li>Algorithms sort you into categories</li>
+                            <li>Others decide your digital fate</li>
+                            <li>No voice in the logic that affects you</li>
+                            <li>Subject to others' biases and assumptions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="power-box with">
+                    <h3>✅ With Coding Literacy</h3>
+                    <div class="power-content">
+                        <p><strong>You help BUILD classification logic</strong></p>
+                        <ul>
+                            <li>Participate in creating fair systems</li>
+                            <li>Question and critique existing logic</li>
+                            <li>Advocate for inclusive categories</li>
+                            <li>Understand how you're being classified</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="precision-note">
+                <p><em>Precision note:</em> Not every line of code is political, but <strong>key design choices about people encode values and have social consequences.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Classification Systems in Action -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">7 / 8</div>
+            <h2>Systems in <span class="highlight">Action</span></h2>
+            <img src="../images/JPEG/filedrawers_sculpture.jpg" alt="Classification systems in practice" class="slide-image-small">
+            
+            <div class="systems-grid">
+                <div class="system-item">
+                    <h4>🏠 Housing Assignment</h4>
+                    <p>Who gets paired with whom? What counts as "compatibility"?</p>
+                    <div class="code-snippet">
+                        <code>if lifestyle_match and study_habits_align:</code>
+                    </div>
+                </div>
+                
+                <div class="system-item">
+                    <h4>📚 Course Registration</h4>
+                    <p>What prerequisites matter? How is "preparedness" measured?</p>
+                    <div class="code-snippet">
+                        <code>if prerequisites_met and gpa_threshold:</code>
+                    </div>
+                </div>
+                
+                <div class="system-item">
+                    <h4>💕 Dating Apps</h4>
+                    <p>What makes a "good match"? Who gets to be visible?</p>
+                    <div class="code-snippet">
+                        <code>if attractiveness_score and proximity:</code>
+                    </div>
+                </div>
+                
+                <div class="system-item">
+                    <h4>🎯 Content Feeds</h4>
+                    <p>What deserves attention? How is "relevance" calculated?</p>
+                    <div class="code-snippet">
+                        <code>if engagement_predicted and ad_revenue:</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <p><strong>Question:</strong> Which categories and thresholds matter is never neutral—someone decided what counts.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Your Political Choice -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">8 / 8</div>
+            <h2>Your Political <span class="highlight">Choice</span></h2>
+            <img src="../images/JPEG/half_digitized_sculpture.jpg" alt="Choice and agency in coding" class="slide-image-small">
+            
+            <div class="choice-framework">
+                <div class="choice-box">
+                    <h3>💭 Consider This</h3>
+                    <p><strong>Coding = language of power in digital society</strong></p>
+                    <div class="choice-options">
+                        <div class="option passive">
+                            <h4>🎭 Option A: Be Classified</h4>
+                            <p>Let others make these choices for you</p>
+                            <p>Accept the categories they create</p>
+                            <p>Hope their biases align with your values</p>
+                        </div>
+                        
+                        <div class="option active">
+                            <h4>⚡ Option B: Participate</h4>
+                            <p>Learn to read and critique code logic</p>
+                            <p>Contribute to building fairer systems</p>
+                            <p>Understand how you're being sorted</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reflection-prompt">
+                <h3>🤔 Reflection Activity</h3>
+                <div class="prompt-box">
+                    <p><strong>"Look at 2-3 pseudocode snippets. What assumptions or biases can you identify? How might they be improved?"</strong></p>
+                </div>
+            </div>
+
+            <div class="transition-next">
+                <h4>Next Up:</h4>
+                <p>Can AI-assisted coding democratize this power, or just make it more opaque?</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation-container">
+        <div class="navigation">
+            <button class="nav-btn" onclick="previousSlide()">←</button>
+            <span class="nav-counter" id="slideCounter">1 / 8</span>
+            <button class="nav-btn" onclick="nextSlide()">→</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            if (n >= totalSlides) { currentSlide = 0; }
+            if (n < 0) { currentSlide = totalSlides - 1; }
+            if (n >= 0 && n < totalSlides) { currentSlide = n; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            
+            const slideCounter = document.getElementById('slideCounter');
+            if (slideCounter) {
+                slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            }
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        let startY = 0;
+        let endY = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.changedTouches[0].screenX;
+            startY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].screenX;
+            endY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+            const minSwipeDistance = 50;
+            
+            // Only register horizontal swipes if they're more horizontal than vertical
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                if (deltaX < 0) {
+                    nextSlide(); // Swipe left = next slide
+                } else {
+                    previousSlide(); // Swipe right = previous slide
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+# Lecture Outlines (Clarified): Data Privacy, Taboos, and Coding
+
+## Table of Contents
+- [10-Minute Intro: From Sacred Boundaries to Digital Privacy](#10-minute-intro-from-sacred-boundaries-to-digital-privacy)
+- [Mini-Lecture: Coding Is Political](#mini-lecture-coding-is-political)
+- [Three-Part Mini-Lecture Series](#three-part-mini-lecture-series)
+- [Teaching Strategy Across Weeks](#teaching-strategy-across-weeks)
+
+---
+
+## 10-Minute Intro: From Sacred Boundaries to Digital Privacy
+
+Purpose: Introduce how taboo boundaries map to modern privacy boundaries in a concise, accessible way.
+
+Timing (10:00 total)
+1) Hook & Definition (2:00)
+- Prompt: “What do ancient Polynesian chiefs and your smartphone have in common?”
+- Define taboo: cultural/religious boundaries around the sacred/dangerous; sanctions for violation.
+- Transition: Today’s “sacred” = personal data and individual autonomy.
+
+2) Core Parallel: Boundary Protection (3:00)
+- Then: Taboo protected sacred knowledge, family secrets, social order.
+- Now: Privacy protects personal information and digital identity.
+- Key insight: Both create “untouchable” zones around what a society values.
+- Illustrative contrast: Chiefs’ shadow (untouchable) ↔ biometric data (untouchable).
+
+3) Violation & Consequences (2:30)
+- Taboo violations: supernatural punishment (in some traditions), social ostracism.
+- Privacy violations: identity theft, social shame, loss of trust, legal penalties.
+- Shared anxiety: “contamination” that can’t be fully undone once boundaries are crossed.
+
+4) Evolution of the Sacred (2:00)
+- Shift: collective religious/cultural values → individual rights/autonomy.
+- Continuity: need for protective boundaries around what we deem precious.
+- Modern “pollution”: unauthorized data access, opaque algorithmic manipulation.
+
+5) Wrap-Up (0:30)
+- Privacy laws as modern taboo enforcement tools.
+- Why breaches feel violating: boundary-crossing of what we now treat as sacred.
+
+Optional 1-minute exit prompt (if time permits)
+- “Name one piece of data you treat as ‘sacred’ and why.”
+
+Suggested Readings (short, accessible)
+- Wikipedia: “Taboo” (etymology: tapu/kapu).
+- danah boyd, “Privacy and Publicity in the Context of Big Data” (blog, 2010).
+
+---
+
+## Mini-Lecture: Coding Is Political
+
+Purpose: Make explicit how coding choices classify people and allocate power; tie back to taboo/status as data.
+
+Timing (10:00–12:00)
+1) Hook & Stakes (2:00)
+- “An algorithm decides your feed, your matches, even aid eligibility—someone coded those rules.”
+- Myth of neutral code: design choices encode values.
+
+2) Taboo Status as Data (2:30)
+- Traditional statuses (virgin/impure/initiated) as boolean-like variables controlling access.
+- Modern parallels: relationship_status, credit_score, criminal_background.
+- Example (Python):
+```python
+if ritually_pure:
+    allow_temple_entry()
+```
+
+3) From Gossip to Algorithms (2:30)
+- Then: community memory enforced boundaries.
+- Now: code automates boundary enforcement (dating app “compatibility,” course “fairness”).
+- These aren’t just technical decisions; they’re political choices about social organization.
+
+4) Power to Classify (2:30)
+- Without literacy: you are classified BY systems.
+- With literacy: you help BUILD classification logic.
+- Refine claim for precision: not “every line” is political, but key design choices about people encode values and have social consequences.
+
+5) Your Political Choice (0:30–1:00)
+- Coding = language of power in digital society.
+- Prompt: “Do you want others making these choices, or to participate in making them?”
+
+---
+
+## Three-Part Mini-Lecture Series
+
+Mini-Lecture 1: Boundaries, Taboos, and Privacy (10–12 minutes)
+- Goal: Map taboo boundaries to digital privacy; establish vocabulary.
+- Outcomes: Define taboo vs. privacy; identify boundary/violation parallels.
+- Outline:
+  - Hook: “What do chiefs and smartphones share?” → “sacred” boundaries.
+  - Define taboo (sacred/forbidden/contaminating) with one concrete example.
+  - Parallels to privacy (bank password, health status, browsing history).
+  - Quick activity: list “off-limits” topics/data; which feel sensitive vs. sacred?
+  - Transition: coding enforces boundaries automatically.
+- Suggested Reading: Wikipedia “Taboo”; danah boyd (2010).
+
+Mini-Lecture 2: Coding as Classification (10–12 minutes)
+- Goal: Show translation of life into code categories (booleans, thresholds) and stakes.
+- Outcomes: Recognize value-laden categories; critique assumptions in simple logic.
+- Outline:
+  - Hook: “If ritually_pure == True: allow_temple_entry()” → coding taboo logic.
+  - Modern examples (pseudocode):
+```python
+if credit_score > 650 and income > 50000:
+    approve_loan()
+else:
+    deny_loan()
+```
+  - Discuss: dating apps, dorm assignments, course registration as classification systems.
+  - Key point: deciding which categories/thresholds matter is never neutral.
+  - Activity: analyze 2–3 short pseudocode snippets; name assumptions/biases.
+- Suggested Reading: Safiya Noble (Intro excerpt); Ruha Benjamin (“Default Discrimination”); Kirschenbaum (Chronicle, 2009).
+
+Mini-Lecture 3: Agentic Coding—Power or Pseudo-Agency? (10–12 minutes)
+- Goal: Probe promise/risks of AI-assisted coding without fatalism.
+- Outcomes: Articulate benefits/risks; distinguish tool use from understanding.
+- Outline:
+  - Hook/demo: Ask AI for 10 lines of Python → “Do you understand each line?”
+  - Promise: lowers barriers; enables action without full training.
+  - Risks: black box, dependency, platform power concentration.
+  - Nuance: with the right pedagogy, AI can scaffold—not supplant—critical thinking.
+  - Discussion prompt: “Is this learning a language, or letting someone speak for you?”
+- Suggested Reading: Ted Chiang (New Yorker, 2023); Nick Seaver (2017); short Zuboff excerpt.
+
+---
+
+## Teaching Strategy Across Weeks
+
+Scaffold (2–3 weeks)
+- Week 1 (Boundaries): Lecture 1 + activity mapping taboo vs. privacy in students’ lives.
+- Week 2 (Classification): Lecture 2 + pseudocode analysis (pre-read Noble/Benjamin excerpt).
+- Week 3 (Agency): Lecture 3 + live AI demo; reflection on empowerment vs. risk.
+
+Assessment ideas (lightweight)
+- Exit tickets (1–2 sentences): “Which category/threshold felt most political and why?”
+- Reflection (200 words): “Where do you see ‘sacred’ data in your life?”
+- Optional: Revise a snippet to reduce bias; explain your change in 2–3 bullets.
+
+Notes for clarity
+- Use “design choices encode values” rather than “every line of code is political.”
+- Keep examples concrete, student-adjacent (feeds, matching, registration, housing).
+- Distinguish “taboo” (sacred/forbidden/contaminating) from “sensitive” (contextual appropriateness).
