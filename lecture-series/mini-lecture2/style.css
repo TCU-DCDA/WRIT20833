@@ -12,6 +12,28 @@ body {
     height: 100vh;
 }
 
+/* WCAG-Compliant Link Styles */
+a {
+    color: #e6d3ff; /* Improved contrast for WCAG compliance */
+    text-decoration: underline; /* Essential for accessibility */
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #f0e6ff; /* Lighter on hover for better feedback */
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #e6d3ff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+a:visited {
+    color: #d4c2ff; /* Slightly different for visited links */
+}
+
 .slide-container {
     display: none;
     height: 100vh;
@@ -51,7 +73,7 @@ h2 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #c9a9ff;
+    color: #e6d3ff; /* Improved contrast from #c9a9ff */
 }
 
 h3 {
@@ -59,7 +81,7 @@ h3 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #c9a9ff;
+    color: #e6d3ff; /* Improved contrast from #c9a9ff */
 }
 
 h4 {
@@ -67,7 +89,7 @@ h4 {
     font-size: 1.4rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: #9b59b6;
+    color: #d0b3ff; /* Improved contrast from #9b59b6 */
 }
 
 p {
@@ -78,13 +100,13 @@ p {
 
 .subtitle {
     font-size: 1.8rem;
-    color: #9b59b6;
+    color: #d0b3ff; /* Improved contrast from #9b59b6 */
     margin-bottom: 2rem;
     font-weight: 300;
 }
 
 .highlight {
-    background: linear-gradient(45deg, #c9a9ff, #9b59b6);
+    background: linear-gradient(45deg, #e6d3ff, #d0b3ff); /* Updated gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -490,9 +512,9 @@ p {
 }
 
 .lecture-nav-btn {
-    background: rgba(201, 169, 255, 0.15);
-    border: 1px solid rgba(201, 169, 255, 0.4);
-    color: #c9a9ff;
+    background: rgba(230, 211, 255, 0.15); /* Improved background */
+    border: 1px solid rgba(230, 211, 255, 0.6); /* Higher contrast border */
+    color: #e6d3ff; /* Improved text color */
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     cursor: pointer;
@@ -509,20 +531,26 @@ p {
 }
 
 .lecture-nav-btn:hover {
-    background: rgba(201, 169, 255, 0.3);
-    border-color: rgba(201, 169, 255, 0.6);
+    background: rgba(230, 211, 255, 0.3); /* Improved hover */
+    border-color: rgba(230, 211, 255, 0.8); /* Higher contrast */
+    color: #f0e6ff; /* Lighter text on hover */
     transform: translateY(-1px);
+}
+
+.lecture-nav-btn:focus {
+    outline: 2px solid #e6d3ff;
+    outline-offset: 2px;
 }
 
 .lecture-nav-btn:active {
     transform: translateY(0);
-    background: rgba(201, 169, 255, 0.4);
+    background: rgba(230, 211, 255, 0.4); /* Improved active state */
 }
 
 .lecture-nav-btn.active {
-    background: rgba(201, 169, 255, 0.4);
-    border-color: rgba(201, 169, 255, 0.8);
-    color: #fff;
+    background: rgba(230, 211, 255, 0.4); /* Improved active background */
+    border-color: rgba(230, 211, 255, 0.9); /* Higher contrast border */
+    color: #ffffff;
     font-weight: 700;
 }
 

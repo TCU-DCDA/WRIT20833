@@ -1,0 +1,73 @@
+/* 
+Additional WCAG Link Improvements
+Include this CSS in your main CSS files or as a separate stylesheet
+This targets specific link scenarios for better accessibility
+*/
+
+/* Inline links within paragraphs and list items */
+p a:not(.project-link):not(.lecture-nav-btn):not(.nav-btn),
+li a:not(.project-link):not(.lecture-nav-btn):not(.nav-btn),
+div a:not(.project-link):not(.lecture-nav-btn):not(.nav-btn) {
+    color: #e6d3ff !important;
+    text-decoration: underline !important;
+    border-bottom: 1px solid rgba(230, 211, 255, 0.3);
+    padding-bottom: 1px;
+    transition: all 0.2s ease;
+}
+
+p a:not(.project-link):not(.lecture-nav-btn):not(.nav-btn):hover,
+li a:not(.project-link):not(.lecture-nav-btn):not(.nav-btn):hover,
+div a:not(.project-link):not(.lecture-nav-btn):not(.nav-btn):hover {
+    color: #f0e6ff !important;
+    border-bottom-color: rgba(240, 230, 255, 0.6);
+    background-color: rgba(230, 211, 255, 0.1);
+}
+
+/* Download links - Special styling */
+a[download],
+.download-link {
+    color: #e6d3ff !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(230, 211, 255, 0.4) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px !important;
+    background: rgba(230, 211, 255, 0.1) !important;
+    display: inline-block !important;
+    margin: 0.5rem 0 !important;
+    transition: all 0.2s ease !important;
+}
+
+a[download]:hover,
+.download-link:hover {
+    color: #f0e6ff !important;
+    border-color: rgba(230, 211, 255, 0.7) !important;
+    background: rgba(230, 211, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+
+a[download]:focus,
+.download-link:focus {
+    outline: 2px solid #e6d3ff !important;
+    outline-offset: 2px !important;
+}
+
+/* Calendar/appointment links */
+a[href*="calendly"],
+a[href*="appointment"] {
+    color: #e6d3ff !important;
+    text-decoration: underline !important;
+    font-weight: 600;
+}
+
+a[href*="calendly"]:hover,
+a[href*="appointment"]:hover {
+    color: #f0e6ff !important;
+    background-color: rgba(230, 211, 255, 0.1);
+}
+
+/* External links indicator for better UX */
+a[target="_blank"]:not(.project-link):not(.lecture-nav-btn):after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.7;
+}

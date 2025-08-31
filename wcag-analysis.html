@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Color Contrast Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a0330, #2d1b5e, #1a0330);
+            padding: 20px;
+        }
+        
+        .color-test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .background-dark {
+            background: #1a0330;
+        }
+        
+        .background-mid {
+            background: #2d1b5e;
+        }
+        
+        .background-transparent {
+            background: rgba(26, 3, 48, 0.95);
+        }
+        
+        /* Current color scheme test cases */
+        .text-primary {
+            color: #c9a9ff;
+        }
+        
+        .text-secondary {
+            color: #b19cd9;
+        }
+        
+        .text-light {
+            color: #e8e8e8;
+        }
+        
+        .text-white {
+            color: white;
+        }
+        
+        .text-purple-accent {
+            color: #9b59b6;
+        }
+        
+        /* Link styles from current site */
+        .link-current {
+            color: #c9a9ff;
+            text-decoration: none;
+        }
+        
+        .link-inline-current {
+            color: #c9a9ff;
+            text-decoration: none;
+        }
+        
+        .nav-button {
+            background: rgba(201, 169, 255, 0.15);
+            border: 1px solid rgba(201, 169, 255, 0.4);
+            color: #c9a9ff;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        /* Improved alternatives */
+        .link-improved {
+            color: #e0c4ff;
+            text-decoration: underline;
+        }
+        
+        .link-improved-alt {
+            color: #f0e6ff;
+            text-decoration: underline;
+        }
+        
+        .nav-button-improved {
+            background: rgba(240, 230, 255, 0.15);
+            border: 1px solid rgba(240, 230, 255, 0.6);
+            color: #f0e6ff;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">WCAG Color Contrast Analysis for WRIT20833 Site</h1>
+    
+    <div class="color-test background-dark">
+        <h2 style="color: white;">Dark Background (#1a0330)</h2>
+        <p class="text-primary">Current primary text color (#c9a9ff) - Headers and emphasis</p>
+        <p class="text-secondary">Current secondary text color (#b19cd9) - Subtitles</p>
+        <p class="text-light">Current light text color (#e8e8e8) - Body text</p>
+        <p class="text-white">White text (#ffffff) - High contrast text</p>
+        <p class="text-purple-accent">Purple accent (#9b59b6) - Used in some contexts</p>
+        
+        <p>Sample paragraph with <a href="#" class="link-current">current link styling</a> in the middle of text.</p>
+        <p>Sample paragraph with <a href="#" class="link-improved">improved link styling</a> in the middle of text.</p>
+        <p>Sample paragraph with <a href="#" class="link-improved-alt">alternative improved link</a> in the middle of text.</p>
+        
+        <p>Navigation buttons:</p>
+        <a href="#" class="nav-button">Current Nav Button</a>
+        <a href="#" class="nav-button-improved">Improved Nav Button</a>
+    </div>
+    
+    <div class="color-test background-mid">
+        <h2 style="color: white;">Medium Background (#2d1b5e)</h2>
+        <p class="text-primary">Current primary text color (#c9a9ff)</p>
+        <p class="text-secondary">Current secondary text color (#b19cd9)</p>
+        <p class="text-light">Current light text color (#e8e8e8)</p>
+        <p class="text-white">White text (#ffffff)</p>
+        
+        <p>Sample paragraph with <a href="#" class="link-current">current link styling</a> in the middle of text.</p>
+        <p>Sample paragraph with <a href="#" class="link-improved">improved link styling</a> in the middle of text.</p>
+        <p>Sample paragraph with <a href="#" class="link-improved-alt">alternative improved link</a> in the middle of text.</p>
+    </div>
+    
+    <div class="color-test background-transparent">
+        <h2 style="color: white;">Transparent Navigation Background (rgba(26, 3, 48, 0.95))</h2>
+        <p class="text-primary">Current primary text color (#c9a9ff)</p>
+        <p class="text-secondary">Current secondary text color (#b19cd9)</p>
+        <p class="text-light">Current light text color (#e8e8e8)</p>
+        <p class="text-white">White text (#ffffff)</p>
+        
+        <p>Sample paragraph with <a href="#" class="link-current">current link styling</a> in the middle of text.</p>
+        <p>Sample paragraph with <a href="#" class="link-improved">improved link styling</a> in the middle of text.</p>
+    </div>
+    
+    <h2 style="color: white; margin-top: 40px;">Color Contrast Analysis</h2>
+    <div style="color: #e8e8e8; background: rgba(26, 3, 48, 0.8); padding: 20px; border-radius: 8px;">
+        <h3 style="color: #c9a9ff;">Current Issues Identified:</h3>
+        <ul>
+            <li><strong>Links in body text:</strong> #c9a9ff on dark backgrounds may not meet WCAG AA contrast requirements (4.5:1)</li>
+            <li><strong>Secondary text:</strong> #b19cd9 likely falls below recommended contrast ratios</li>
+            <li><strong>Navigation buttons:</strong> Low opacity backgrounds with colored text create accessibility barriers</li>
+        </ul>
+        
+        <h3 style="color: #c9a9ff;">Recommended Improvements:</h3>
+        <ul>
+            <li><strong>Use lighter link colors:</strong> #e0c4ff or #f0e6ff for better contrast</li>
+            <li><strong>Add underlines to links:</strong> Helps users who may have color vision differences</li>
+            <li><strong>Increase contrast for secondary text:</strong> Use #d0b3ff instead of #b19cd9</li>
+            <li><strong>Improve button contrast:</strong> Use higher opacity backgrounds or lighter text colors</li>
+        </ul>
+    </div>
+</body>
+</html>

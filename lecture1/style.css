@@ -12,6 +12,28 @@ body {
     height: 100vh;
 }
 
+/* WCAG-Compliant Link Styles */
+a {
+    color: #e6d3ff; /* Improved contrast for WCAG compliance */
+    text-decoration: underline; /* Essential for accessibility */
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #f0e6ff; /* Lighter on hover for better feedback */
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #e6d3ff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+a:visited {
+    color: #d4c2ff; /* Slightly different for visited links */
+}
+
 .slide-container {
     display: none;
     height: 100vh;
@@ -49,14 +71,14 @@ h1 {
 h2 {
     font-family: 'Orbitron', monospace;
     font-size: 3rem;
-    color: #c9a9ff;
+    color: #e6d3ff; /* Improved contrast from #c9a9ff */
     margin-bottom: 2rem;
 }
 
 h3 {
     font-family: 'Orbitron', monospace;
     font-size: 2.2rem;
-    color: #b19cd9;
+    color: #d0b3ff; /* Improved contrast from #b19cd9 */
     margin-bottom: 1.5rem;
 }
 
@@ -64,12 +86,12 @@ p {
     font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    color: #e8e8e8;
+    color: #f0f0f0; /* Improved contrast from #e8e8e8 */
 }
 
 .subtitle {
     font-size: 1.8rem;
-    color: #b19cd9;
+    color: #d0b3ff; /* Improved contrast from #b19cd9 */
     margin-bottom: 2.5rem;
 }
 
@@ -80,17 +102,17 @@ p {
 .quote {
     font-style: italic;
     font-size: 1.4rem;
-    color: #c9a9ff;
+    color: #e6d3ff; /* Improved contrast from #c9a9ff */
     margin: 2rem 0;
     padding: 1.5rem;
-    border-left: 4px solid #c9a9ff;
-    background: rgba(201, 169, 255, 0.1);
+    border-left: 4px solid #e6d3ff; /* Updated border color */
+    background: rgba(230, 211, 255, 0.1); /* Updated background */
     text-align: left;
 }
 
 .citation {
     font-size: 1.2rem;
-    color: #b19cd9;
+    color: #d0b3ff; /* Improved contrast from #b19cd9 */
     margin-top: 1rem;
 }
 
@@ -125,9 +147,9 @@ p {
 }
 
 .nav-btn {
-    background: rgba(201, 169, 255, 0.15);
-    border: 1px solid rgba(201, 169, 255, 0.4);
-    color: #c9a9ff;
+    background: rgba(230, 211, 255, 0.15); /* Improved background opacity */
+    border: 1px solid rgba(230, 211, 255, 0.6); /* Higher contrast border */
+    color: #e6d3ff; /* Improved text contrast */
     padding: 0.4rem 0.6rem;
     border-radius: 4px;
     cursor: pointer;
@@ -144,9 +166,15 @@ p {
 }
 
 .nav-btn:hover {
-    background: rgba(201, 169, 255, 0.3);
-    border-color: rgba(201, 169, 255, 0.6);
+    background: rgba(230, 211, 255, 0.3); /* Improved hover state */
+    border-color: rgba(230, 211, 255, 0.8); /* Higher contrast border */
+    color: #f0e6ff; /* Lighter text on hover */
     transform: translateY(-1px);
+}
+
+.nav-btn:focus {
+    outline: 2px solid #e6d3ff;
+    outline-offset: 2px;
 }
 
 .nav-btn:active {
@@ -156,7 +184,7 @@ p {
 
 .nav-counter {
     font-family: 'Orbitron', monospace;
-    color: #c9a9ff;
+    color: #e6d3ff; /* Improved contrast from #c9a9ff */
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -178,13 +206,13 @@ ul {
 
 li {
     margin-bottom: 1rem;
-    color: #e8e8e8;
+    color: #f0f0f0; /* Improved contrast from #e8e8e8 */
     padding-left: 0.5rem;
 }
 
 .instructor-info {
     font-size: 1.4rem;
-    color: #b19cd9;
+    color: #d0b3ff; /* Improved contrast from #b19cd9 */
     margin-top: 1.5rem;
 }
 
@@ -202,10 +230,10 @@ li {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 1rem 2rem;
-    background: rgba(201, 169, 255, 0.2);
-    border: 2px solid #c9a9ff;
+    background: rgba(230, 211, 255, 0.2); /* Improved background */
+    border: 2px solid #e6d3ff; /* Improved border color */
     border-radius: 8px;
-    color: #c9a9ff;
+    color: #e6d3ff; /* Improved text color */
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
@@ -213,10 +241,15 @@ li {
 }
 
 .project-link:hover {
-    background: rgba(201, 169, 255, 0.4);
-    color: white;
+    background: rgba(230, 211, 255, 0.4); /* Improved hover background */
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(201, 169, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(230, 211, 255, 0.3); /* Updated shadow */
+}
+
+.project-link:focus {
+    outline: 2px solid #e6d3ff;
+    outline-offset: 2px;
 }
 
 /* Mobile Responsive Styles */
@@ -367,12 +400,12 @@ li {
     }
 
     .project-link:hover {
-        background: rgba(201, 169, 255, 0.2);
+        background: rgba(230, 211, 255, 0.2); /* Updated for consistency */
         transform: none;
         box-shadow: none;
     }
 
     .project-link:active {
-        background: rgba(201, 169, 255, 0.4);
+        background: rgba(230, 211, 255, 0.4); /* Updated for consistency */
     }
 }
