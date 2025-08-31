@@ -551,6 +551,64 @@ p {
     pointer-events: none;
 }
 
+/* Inter-lecture Navigation */
+.inter-lecture-nav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.lecture-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(26, 3, 48, 0.95);
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(201, 169, 255, 0.3);
+    backdrop-filter: blur(10px);
+    pointer-events: auto;
+}
+
+.lecture-nav-btn {
+    background: rgba(201, 169, 255, 0.15);
+    border: 1px solid rgba(201, 169, 255, 0.4);
+    color: #c9a9ff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Orbitron', monospace;
+    transition: all 0.2s ease;
+    font-size: 0.7rem;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.lecture-nav-btn:hover {
+    background: rgba(201, 169, 255, 0.3);
+    border-color: rgba(201, 169, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+.lecture-nav-btn:active {
+    transform: translateY(0);
+    background: rgba(201, 169, 255, 0.4);
+}
+
+.lecture-nav-btn.active {
+    background: rgba(201, 169, 255, 0.4);
+    border-color: rgba(201, 169, 255, 0.8);
+    color: #fff;
+    font-weight: 700;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -631,6 +689,22 @@ p {
         right: 0.5rem;
     }
     
+    .inter-lecture-nav {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+    
+    .lecture-nav {
+        padding: 0.3rem 0.5rem;
+        gap: 0.4rem;
+    }
+    
+    .lecture-nav-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.65rem;
+        min-height: 28px;
+    }
+    
     .navigation {
         padding: 0.3rem 0.5rem;
         gap: 0.4rem;
@@ -673,5 +747,174 @@ p {
     
     .promise-grid, .risks-grid {
         gap: 1rem;
+    }
+}
+
+/* Power Split Layout for New Slides */
+.power-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.empowering-side {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(139, 195, 74, 0.1));
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.empowering-side h3 {
+    color: #4CAF50;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.empowering-side ul {
+    list-style: none;
+    padding: 0;
+}
+
+.empowering-side li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.empowering-side li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.risk-side {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.15), rgba(255, 87, 34, 0.1));
+    border: 2px solid #f44336;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.risk-side h3 {
+    color: #f44336;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.risk-side ul {
+    list-style: none;
+    padding: 0;
+}
+
+.risk-side li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.risk-side li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f44336;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.bottom-question {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.2), rgba(103, 58, 183, 0.15));
+    border-radius: 15px;
+    border: 2px solid #9c27b0;
+}
+
+.bottom-question p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #c9a9ff;
+    margin: 0;
+}
+
+/* Hidden Costs Grid */
+.hidden-costs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.cost-item {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+    border: 2px solid #FFC107;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.cost-item h4 {
+    color: #FFC107;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.cost-item p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0.5rem 0;
+}
+
+.tier-system {
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+.tier-system ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tier-system li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+.tier-system li::before {
+    content: "◦";
+    position: absolute;
+    left: 0;
+    color: #FFC107;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .power-split-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .empowering-side, .risk-side, .cost-item {
+        padding: 1rem;
+    }
+    
+    .bottom-question p {
+        font-size: 1.1rem;
     }
 }
