@@ -443,15 +443,21 @@ p {
 
 .implications {
     display: grid;
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     margin: 2rem 0;
 }
 
 .implication {
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     border: 2px solid;
     text-align: left;
+}
+
+.implication h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
 }
 
 .empowerment {
@@ -476,8 +482,8 @@ p {
 }
 
 .implication li {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
     padding-left: 1.5rem;
     position: relative;
 }
@@ -881,7 +887,7 @@ p {
 /* Hidden Costs Grid */
 .hidden-costs-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 2rem 0;
     text-align: left;
@@ -891,20 +897,20 @@ p {
     background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
     border: 2px solid #FFC107;
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 .cost-item h4 {
     color: #FFC107;
     font-family: 'Orbitron', monospace;
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .cost-item p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     line-height: 1.4;
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
 }
 
 .tier-system {
