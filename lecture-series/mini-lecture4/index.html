@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Lecture 4: Collective Digital Memory - WRIT 20833</title>
+    <!-- Updated for GitHub Pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Slide 1: Title/Hook -->
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="slide-number">1 / 9</div>
+            <h1>Collective Digital Memory</h1>
+            <p class="subtitle">How Code Remembers What Communities Used to Forget</p>
+            <img src="newImages/slide01_collective_memory.jpg" alt="Digital memory systems visualization" class="slide-image">
+            
+            <div class="hook-question">
+                <h2 style="color: #c9a9ff; font-size: 2.5rem; margin: 2rem 0;">
+                    "What happens when nothing is forgotten and everything is counted?"
+                </h2>
+            </div>
+            
+            <div class="code-preview">
+                <div class="code-block">
+                    <pre><code>violations = []
+for person in community:
+    if person.broke_taboo:
+        violations.append(person.name)
+        
+# The code remembers forever</code></pre>
+                </div>
+            </div>
+            
+            <div class="instructor-info">WRIT 20833 • Mini-Lecture 4</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Traditional vs Digital Memory -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">2 / 9</div>
+            <h2>Memory <span class="highlight">Systems</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide02_memory_systems.jpg" alt="Memory systems comparison">
+                </div>
+                <div class="content-column">
+                    <div class="comparison-grid">
+                        <div class="comparison-box traditional">
+                            <h3>🗣️ Traditional Community Memory</h3>
+                            <ul>
+                                <li><strong>Selective:</strong> Some things forgotten</li>
+                                <li><strong>Contextual:</strong> Stories change with perspective</li>
+                                <li><strong>Forgiving:</strong> Time heals social wounds</li>
+                                <li><strong>Human:</strong> Gossip, oral tradition</li>
+                                <li><strong>Flexible:</strong> Redemption possible</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-box digital">
+                            <h3>💾 Digital Collective Memory</h3>
+                            <ul>
+                                <li><strong>Total:</strong> Everything recorded</li>
+                                <li><strong>Fixed:</strong> Data points don't change</li>
+                                <li><strong>Unforgiving:</strong> Permanent digital record</li>
+                                <li><strong>Automated:</strong> Algorithms, databases</li>
+                                <li><strong>Rigid:</strong> Past defines future access</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="key-insight">
+                        <p><strong>Key Shift:</strong> From selective human memory to comprehensive digital memory</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Lists as Collections of People -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">3 / 9</div>
+            <h2>Lists = <span class="highlight">Populations</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide03_lists_populations.jpg" alt="Lists as population control">
+                </div>
+                <div class="content-column">
+                    <div class="code-demonstration">
+                        <h3>From Individual to Collective</h3>
+                        
+                        <div class="code-block">
+                            <h4>Individual Processing:</h4>
+                            <pre><code>person_age = 25
+if person_age >= 18:
+    print("Can vote")
+else:
+    print("Cannot vote")</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <h4>Population Processing:</h4>
+                            <pre><code>community_ages = [17, 25, 35, 45, 67]
+eligible_voters = []
+
+for age in community_ages:
+    if age >= 18:
+        eligible_voters.append(age)
+        
+print(f"Eligible: {len(eligible_voters)}")
+# Instant demographic analysis</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="population-insight">
+                        <h4>The Power Shift:</h4>
+                        <p>Code doesn't just classify individuals—it processes entire populations automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Loops as Systematic Processing -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">4 / 9</div>
+            <h2>Loops = <span class="highlight">Systematic Control</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide04_loops_control.jpg" alt="Systematic processing visualization">
+                </div>
+                <div class="content-column">
+                    <div class="systematic-comparison">
+                        <div class="comparison-item">
+                            <h3>🏛️ Traditional: Case-by-Case</h3>
+                            <div class="scenario-box">
+                                <p><strong>Village Elder Process:</strong></p>
+                                <ul>
+                                    <li>Knows each person individually</li>
+                                    <li>Considers context and circumstances</li>
+                                    <li>Makes judgment calls</li>
+                                    <li>Allows for exceptions and mercy</li>
+                                    <li>Limited by human memory and time</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-item">
+                            <h3>⚙️ Digital: Systematic Processing</h3>
+                            <div class="scenario-box">
+                                <p><strong>For Loop Process:</strong></p>
+                                <div class="code-block">
+                                    <pre><code>for person in population:
+    if person.credit_score < 600:
+        deny_loan(person)
+    else:
+        approve_loan(person)</code></pre>
+                                </div>
+                                <ul>
+                                    <li>Same rule applied to everyone</li>
+                                    <li>No context consideration</li>
+                                    <li>No human judgment</li>
+                                    <li>No exceptions</li>
+                                    <li>Processes thousands instantly</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Counting as Surveillance -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">5 / 9</div>
+            <h2>Counting = <span class="highlight">Surveillance</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide05_counting_surveillance.jpg" alt="Data surveillance visualization">
+                </div>
+                <div class="content-column">
+                    <div class="surveillance-analysis">
+                        <h3>The Politics of Counting</h3>
+                        
+                        <div class="counting-example">
+                            <div class="code-block">
+                                <pre><code>from collections import Counter
+
+violations = ['privacy_breach', 'data_leak', 
+             'privacy_breach', 'algorithm_bias',
+             'data_leak', 'privacy_breach']
+
+violation_counts = Counter(violations)
+print(violation_counts.most_common())
+
+# Output: [('privacy_breach', 3), 
+#          ('data_leak', 2), 
+#          ('algorithm_bias', 1)]</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="surveillance-questions">
+                            <h4>Critical Questions:</h4>
+                            <ul>
+                                <li>Who decides what gets counted?</li>
+                                <li>What categories are created?</li>
+                                <li>Who has access to the counts?</li>
+                                <li>How do counts become justifications for action?</li>
+                                <li>What happens to outliers that don't fit categories?</li>
+                            </ul>
+                        </div>
+
+                        <div class="power-note">
+                            <p><strong>Remember:</strong> The power to count is the power to define what matters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Historical Data and Power -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">6 / 9</div>
+            <h2>Historical <span class="highlight">Echoes</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide06_historical_echoes.jpg" alt="Historical data visualization">
+                </div>
+                <div class="content-column">
+                    <div class="historical-parallel">
+                        <h3>From Bellevue Almshouse to Big Data</h3>
+                        
+                        <div class="historical-note">
+                            <p><em>As historian Anelise Shrout notes about the 1840s Bellevue Almshouse records:</em></p>
+                            <blockquote>
+                                "This data was produced with the express purpose of reducing people to bodies; bodies to easily quantifiable aspects; and assigning value to those aspects which proved that the marginalized people to whom they belonged were worth less than their elite counterparts."
+                            </blockquote>
+                        </div>
+
+                        <div class="modern-parallel">
+                            <h4>Today's Digital Equivalent:</h4>
+                            <div class="code-block">
+                                <pre><code>immigrant_data = [
+    {'name': 'Mary', 'status': 'recent_emigrant', 'disease': 'poverty'},
+    {'name': 'John', 'status': 'recent_emigrant', 'disease': 'destitution'},
+    {'name': 'Kate', 'status': 'recent_emigrant', 'disease': 'unemployment'}
+]
+
+# Same reduction of humans to data points
+# Same classification of worthiness
+# Same institutional power to categorize</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="continuity-insight">
+                            <p><strong>The continuity:</strong> Technology changes, but the power to classify and exclude remains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: The Scale Problem -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">7 / 9</div>
+            <h2>The <span class="highlight">Scale</span> Problem</h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide07_scale_problem.jpg" alt="Scale of digital processing">
+                </div>
+                <div class="content-column">
+                    <div class="scale-analysis">
+                        <h3>When Individual Decisions Become Mass Processing</h3>
+                        
+                        <div class="scale-comparison">
+                            <div class="scale-item">
+                                <h4>📊 Traditional Scale</h4>
+                                <ul>
+                                    <li>Village elder knows ~150 people</li>
+                                    <li>Decisions take time and thought</li>
+                                    <li>Mistakes affect individuals</li>
+                                    <li>Community can intervene</li>
+                                    <li>Human accountability</li>
+                                </ul>
+                            </div>
+
+                            <div class="scale-item">
+                                <h4>🌐 Digital Scale</h4>
+                                <ul>
+                                    <li>Algorithm processes millions instantly</li>
+                                    <li>Decisions automated and instantaneous</li>
+                                    <li>Mistakes affect entire populations</li>
+                                    <li>No human oversight at scale</li>
+                                    <li>Algorithmic accountability gap</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-scale-demo">
+                            <div class="code-block">
+                                <pre><code># Processing 1 million loan applications
+for application in million_applications:
+    if application.credit_score < threshold:
+        applications_denied.append(application)
+        
+# Institutional bias applied at scale
+# No individual consideration possible</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="scale-warning">
+                            <p><strong>The danger:</strong> Coding amplifies bias from individual to societal level.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Your Coding Agency -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">8 / 9</div>
+            <h2>Your <span class="highlight">Agency</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide08_your_agency.jpg" alt="Coding agency visualization">
+                </div>
+                <div class="content-column">
+                    <div class="agency-framework">
+                        <h3>Understanding Lists and Loops Gives You Power To:</h3>
+                        
+                        <div class="agency-list">
+                            <div class="agency-item">
+                                <h4>🔍 Audit Collective Processing</h4>
+                                <p>Analyze how algorithms process groups of people</p>
+                                <div class="mini-code">
+                                    <code>Counter(algorithmic_decisions)</code>
+                                </div>
+                            </div>
+
+                            <div class="agency-item">
+                                <h4>⚖️ Identify Systematic Bias</h4>
+                                <p>Count patterns of discrimination across populations</p>
+                                <div class="mini-code">
+                                    <code>for person in denied_applicants: analyze_bias()</code>
+                                </div>
+                            </div>
+
+                            <div class="agency-item">
+                                <h4>📊 Create Alternative Classifications</h4>
+                                <p>Build lists that challenge dominant categories</p>
+                                <div class="mini-code">
+                                    <code>humanizing_categories = [context, story, complexity]</code>
+                                </div>
+                            </div>
+
+                            <div class="agency-item">
+                                <h4>🛡️ Protect Collective Privacy</h4>
+                                <p>Process data in ways that preserve human dignity</p>
+                                <div class="mini-code">
+                                    <code>anonymized_insights = aggregate_without_exposing()</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="agency-call">
+                            <p><strong>Lists and loops aren't just technical skills—they're tools for social justice.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Reflection and Practice -->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="slide-number">9 / 9</div>
+            <h2>Your Digital <span class="highlight">Memory</span></h2>
+            
+            <div class="two-column-layout">
+                <div class="image-column">
+                    <img src="newImages/slide09_yourDigitalMemory.jpg" alt="Digital memory reflection">
+                </div>
+                <div class="content-column">
+                    <div class="reflection-section">
+                        <h3>🤔 Reflection Prompts</h3>
+                        
+                        <div class="prompt-box">
+                            <h4>Individual Reflection:</h4>
+                            <p><strong>"What would you want a community to remember about you? What would you want them to forget?"</strong></p>
+                        </div>
+
+                        <div class="prompt-box">
+                            <h4>Collective Reflection:</h4>
+                            <p><strong>"How might we design digital memory systems that are more forgiving and contextual?"</strong></p>
+                        </div>
+
+                        <div class="coding-connection">
+                            <h4>🐍 Python Practice Ahead:</h4>
+                            <p>In our next tutorial, you'll use lists and loops to:</p>
+                            <ul>
+                                <li>Process historical immigration data</li>
+                                <li>Count patterns of institutional categorization</li>
+                                <li>Build more humane classification systems</li>
+                                <li>Analyze collective digital memory</li>
+                            </ul>
+                        </div>
+
+                        <div class="practice-link">
+                            <h4>📓 Interactive Python Practice:</h4>
+                            <p><a href="../../assignments/Tutorial_04_Collective_Memory_MiniLecture4.ipynb" target="_blank" class="download-link">
+                                Tutorial 4: Collective Digital Memory
+                            </a></p>
+                            <p><em>Practice lists and loops while exploring digital memory systems</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inter-lecture Navigation -->
+    <div class="inter-lecture-nav">
+        <div class="lecture-nav">
+            <a href="../mini-lecture1/index.html" class="lecture-nav-btn" target="_blank">Boundaries</a>
+            <a href="../mini-lecture2/index.html" class="lecture-nav-btn" target="_blank">Classification</a>
+            <a href="../mini-lecture3/index.html" class="lecture-nav-btn" target="_blank">Agency</a>
+            <a href="../mini-lecture4/index.html" class="lecture-nav-btn active" target="_blank">Memory</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation-container">
+        <div class="navigation">
+            <button class="nav-btn" onclick="previousSlide()">←</button>
+            <span class="nav-counter" id="slideCounter">1 / 9</span>
+            <button class="nav-btn" onclick="nextSlide()">→</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            if (n >= totalSlides) { currentSlide = 0; }
+            if (n < 0) { currentSlide = totalSlides - 1; }
+            if (n >= 0 && n < totalSlides) { currentSlide = n; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            
+            const slideCounter = document.getElementById('slideCounter');
+            if (slideCounter) {
+                slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            }
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        let startY = 0;
+        let endY = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.changedTouches[0].screenX;
+            startY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].screenX;
+            endY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+            const minSwipeDistance = 50;
+            
+            // Only register horizontal swipes if they're more horizontal than vertical
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                if (deltaX < 0) {
+                    nextSlide(); // Swipe left = next slide
+                } else {
+                    previousSlide(); // Swipe right = previous slide
+                }
+            }
+        }
+    </script>
+</body>
+</html>

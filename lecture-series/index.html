@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRIT 20833 - Mini-Lecture Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0118 0%, #1a0330 50%, #2d1b69 100%);
+            color: #e6d3ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #9d7ced, #c9a9ff, #e6d3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(201, 169, 255, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #c9a9ff;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .lecture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .lecture-card {
+            background: rgba(26, 3, 48, 0.8);
+            border: 1px solid rgba(201, 169, 255, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .lecture-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(157, 124, 237, 0.1), rgba(201, 169, 255, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .lecture-card:hover::before {
+            opacity: 1;
+        }
+
+        .lecture-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(201, 169, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(157, 124, 237, 0.4);
+        }
+
+        .lecture-content {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .lecture-thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid rgba(201, 169, 255, 0.4);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .lecture-card:hover .lecture-thumbnail {
+            border-color: rgba(201, 169, 255, 0.8);
+            transform: scale(1.05);
+        }
+
+        .lecture-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #9d7ced;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .lecture-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #e6d3ff;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .lecture-theme {
+            font-size: 1rem;
+            color: #c9a9ff;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #9d7ced;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+
+            .lecture-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 400px;
+            }
+
+            .lecture-card {
+                padding: 1.5rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .lecture-thumbnail {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 1rem;
+            }
+
+            .lecture-number {
+                font-size: 2.5rem;
+            }
+
+            .lecture-title {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .lecture-number {
+                font-size: 2rem;
+            }
+
+            .lecture-title {
+                font-size: 1rem;
+            }
+
+            .lecture-theme {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mini-Lecture Series</h1>
+        <p class="subtitle">Introduction to Coding in the Humanities</p>
+        
+        <div class="lecture-grid">
+            <a href="mini-lecture1/index.html" class="lecture-card" target="_blank">
+                <img src="images/lecture1_thumb.jpg" alt="Sacred Boundaries" class="lecture-thumbnail">
+                <div class="lecture-content">
+                    <span class="lecture-number">01</span>
+                    <h2 class="lecture-title">Sacred Boundaries</h2>
+                    <p class="lecture-theme">Where Code Meets Power</p>
+                </div>
+            </a>
+
+            <a href="mini-lecture2/index.html" class="lecture-card" target="_blank">
+                <img src="images/lecture2_thumb.jpg" alt="Coding Taboo Logic" class="lecture-thumbnail">
+                <div class="lecture-content">
+                    <span class="lecture-number">02</span>
+                    <h2 class="lecture-title">Coding Taboo Logic</h2>
+                    <p class="lecture-theme">How Algorithms Sort Society</p>
+                </div>
+            </a>
+
+            <a href="mini-lecture3/index.html" class="lecture-card" target="_blank">
+                <img src="images/lecture3_thumb.jpg" alt="Agentic Coding" class="lecture-thumbnail">
+                <div class="lecture-content">
+                    <span class="lecture-number">03</span>
+                    <h2 class="lecture-title">Agentic Coding</h2>
+                    <p class="lecture-theme">Who Controls the Intelligence?</p>
+                </div>
+            </a>
+
+            <a href="mini-lecture4/index.html" class="lecture-card" target="_blank">
+                <img src="images/lecture4_thumb.jpg" alt="Collective Digital Memory" class="lecture-thumbnail">
+                <div class="lecture-content">
+                    <span class="lecture-number">04</span>
+                    <h2 class="lecture-title">Collective Digital Memory</h2>
+                    <p class="lecture-theme">How Code Remembers</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>WRIT 20833 | Fall 2025</p>
+        </div>
+    </div>
+</body>
+</html>
