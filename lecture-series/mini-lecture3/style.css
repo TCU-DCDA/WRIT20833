@@ -647,6 +647,19 @@ p {
     font-weight: 700;
 }
 
+.lecture-nav-btn.series-home {
+    background: rgba(46, 204, 113, 0.15);
+    border-color: rgba(46, 204, 113, 0.6);
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.lecture-nav-btn.series-home:hover {
+    background: rgba(46, 204, 113, 0.3);
+    border-color: rgba(46, 204, 113, 0.8);
+    color: #27ae60;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -697,6 +710,90 @@ p {
     letter-spacing: 0.5px;
     margin: 0 0.25rem;
     opacity: 0.8;
+}
+
+/* Reading Resources Styles */
+.reading-intro {
+    background: linear-gradient(45deg, rgba(201, 169, 255, 0.15), rgba(155, 89, 182, 0.15));
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #c9a9ff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.reading-intro h3 {
+    color: #c9a9ff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.reading-intro p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.reading-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reading-card {
+    background: rgba(26, 3, 48, 0.7);
+    border: 2px solid #9b59b6;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.reading-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(155, 89, 182, 0.3);
+    border-color: #c9a9ff;
+}
+
+.reading-card h4 {
+    color: #c9a9ff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', monospace;
+}
+
+.reading-card .author {
+    color: #9b59b6;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.reading-card .description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.reading-card .link {
+    display: inline-block;
+    background: linear-gradient(45deg, #9b59b6, #c9a9ff);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.reading-card .link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.4);
+    color: white;
 }
 
 /* Responsive Design */

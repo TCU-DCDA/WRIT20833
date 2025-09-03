@@ -558,6 +558,19 @@ p {
     font-weight: 700;
 }
 
+.lecture-nav-btn.series-home {
+    background: rgba(46, 204, 113, 0.15);
+    border-color: rgba(46, 204, 113, 0.6);
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.lecture-nav-btn.series-home:hover {
+    background: rgba(46, 204, 113, 0.3);
+    border-color: rgba(46, 204, 113, 0.8);
+    color: #27ae60;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -696,5 +709,138 @@ p {
     
     .code-block code {
         font-size: 1rem;
+    }
+}
+
+/* Reading Cards Styles */
+.readings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+    max-width: 1000px;
+}
+
+.reading-card {
+    background: rgba(157, 124, 237, 0.1);
+    border: 1px solid rgba(157, 124, 237, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.reading-card:hover {
+    background: rgba(157, 124, 237, 0.15);
+    border-color: rgba(157, 124, 237, 0.5);
+    transform: translateY(-2px);
+}
+
+.reading-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.reading-header h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    color: #c9a9ff;
+    margin: 0;
+}
+
+.reading-header .year {
+    font-size: 0.9rem;
+    color: #9d7ced;
+    font-weight: 500;
+}
+
+.reading-card h3 {
+    font-size: 1.1rem;
+    color: #e6d3ff;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.reading-description {
+    font-size: 0.95rem;
+    color: #c9a9ff;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.reading-link {
+    display: inline-block;
+    color: #9d7ced !important;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(157, 124, 237, 0.4);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.reading-link:hover {
+    background: rgba(157, 124, 237, 0.2);
+    border-color: rgba(157, 124, 237, 0.6);
+    color: #e6d3ff !important;
+    text-decoration: none;
+}
+
+.reading-link:focus {
+    outline: 2px solid #e6d3ff;
+    outline-offset: 2px;
+}
+
+.next-lecture-preview {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(201, 169, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 255, 0.2);
+}
+
+.next-lecture-preview h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    color: #e6d3ff;
+    margin-bottom: 0.5rem;
+}
+
+.next-lecture-preview p {
+    color: #c9a9ff;
+    font-size: 1rem;
+}
+
+/* Mobile responsiveness for reading cards */
+@media (max-width: 768px) {
+    .readings-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .reading-card {
+        padding: 1rem;
+    }
+    
+    .reading-header h4 {
+        font-size: 0.9rem;
+    }
+    
+    .reading-card h3 {
+        font-size: 1rem;
+    }
+    
+    .reading-description {
+        font-size: 0.9rem;
+    }
+    
+    .next-lecture-preview {
+        margin-top: 2rem;
+        padding: 1rem;
     }
 }
