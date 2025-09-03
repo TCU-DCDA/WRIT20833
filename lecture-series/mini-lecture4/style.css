@@ -182,7 +182,7 @@ h2 {
 
 .two-column-layout {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
     margin-top: 2rem;
