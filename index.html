@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRIT 20833 - Redirecting to 2025 Site</title>
+    
+    <!-- Immediate redirect via meta refresh -->
+    <meta http-equiv="refresh" content="0; url=./lecture-series/index.html">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0118 0%, #1a0330 50%, #2d1b69 100%);
+            color: #e6d3ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .redirect-message {
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #c9a9ff;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        a {
+            color: #e6d3ff;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: #f0e6ff;
+        }
+        
+        .spinner {
+            border: 3px solid rgba(230, 211, 255, 0.3);
+            border-top: 3px solid #e6d3ff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        <h1>WRIT 20833 - Fall 2025</h1>
+        <div class="spinner"></div>
+        <p>Redirecting to the course site...</p>
+        <p>If you are not automatically redirected, please <a href="./lecture-series/index.html">click here to access the course materials</a>.</p>
+    </div>
+
+    <script>
+        // JavaScript redirect as backup
+        window.location.href = "./lecture-series/index.html";
+    </script>
+</body>
+</html>
